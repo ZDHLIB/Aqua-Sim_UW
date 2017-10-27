@@ -1,0 +1,10 @@
+SINK(0) : num_send = 0, num_recv = 2, cum_delay = 40.159452
+SINK(0) : send_id = 11, num_recv = 2
+SINK(11) : num_send = 5, num_recv = 0, cum_delay = 0.000000
+God : consumped_energy = 27.814259
+SINK(0) : num_send = 0, num_recv = 184, cum_delay = 3038.607353
+SINK(4) : num_send = 56, num_recv = 0, cum_delay = 0.000000
+SINK(1) : num_send = 42, num_recv = 0, cum_delay = 0.000000
+SINK(2) : num_send = 43, num_recv = 0, cum_delay = 0.000000
+SINK(3) : num_send = 52, num_recv = 0, cum_delay = 0.000000
+God : consumped_energy = 22.197285

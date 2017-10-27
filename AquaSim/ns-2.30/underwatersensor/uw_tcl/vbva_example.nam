@@ -1,0 +1,591 @@
+n -t * -s 0  -x 0 -y 10 -Z 0 -z 10  -v circle -c green
+n -t * -s 1  -x -10 -y 50 -Z 0 -z 10  -v circle -c green
+n -t * -s 2  -x -10 -y 90 -Z 0 -z 10  -v circle -c green
+n -t * -s 3  -x 20 -y 180 -Z 0 -z 10  -v circle -c green
+n -t * -s 4  -x 100 -y 210 -Z 0 -z 10  -v circle -c green
+n -t * -s 5  -x 150 -y 250 -Z 0 -z 10  -v circle -c green
+n -t * -s 6  -x 200 -y 200 -Z 0 -z 10  -v circle -c green
+n -t * -s 7  -x 200 -y 150 -Z 0 -z 10  -v circle -c green
+n -t * -s 8  -x 250 -y 50 -Z 0 -z 10  -v circle -c green
+n -t * -s 9  -x 150 -y 80 -Z 0 -z 10  -v circle -c green
+n -t * -s 10  -x 100 -y 100 -Z 0 -z 10  -v circle -c green
+n -t * -s 11  -x 200 -y 0 -Z 0 -z 10  -v circle -c green
+V -t * -v 1.0a5 -a 0
+W -t * -x 400 -y 400
+A -t * -n 1 -p 0 -o 0xffffffff -c 31 -a 1
+A -t * -h 1 -m 2147483647 -s 0
++ -t 2.000058958 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.000058958 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 2.000058958 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.000058958 -e sim_annotation 2.000058958 1 node 11 sendout packet (vectorbasedforward) 0
+r -t 2.303199410 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.303199410 -e sim_annotation 2.303199410 2 node 8 receive packet(vectorbasedforward) 0
+r -t 2.318952165 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.318952165 -e sim_annotation 2.318952165 3 node 9 receive packet(vectorbasedforward) 0
++ -t 4.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 4.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.300025000 -e sim_annotation 4.300025000 4 node 11 sendout packet (vectorbasedforward) 0
+r -t 4.475165452 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.475165452 -e sim_annotation 4.475165452 5 node 8 receive packet(vectorbasedforward) 0
++ -t 4.475215452 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.475215452 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 4.475215452 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.475215452 -e sim_annotation 4.475215452 6 node 8 sendout packet (vectorbasedforward) 0
+r -t 4.490918208 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.490918208 -e sim_annotation 4.490918208 7 node 9 receive packet(vectorbasedforward) 0
++ -t 4.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 4.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.490968208 -e sim_annotation 4.490968208 8 node 9 sendout packet (vectorbasedforward) 0
+d -t 4.778355904 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+v -t 4.778355904 -e sim_annotation 4.778355904 9 node 11 drop packet(vectorbasedforward) 0
+r -t 4.782869306 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.782869306 -e sim_annotation 4.782869306 10 node 10 receive packet(vectorbasedforward) 0
+r -t 4.804317043 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.804317043 -e sim_annotation 4.804317043 11 node 7 receive packet(vectorbasedforward) 0
+d -t 4.809861415 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+v -t 4.809861415 -e sim_annotation 4.809861415 12 node 11 drop packet(vectorbasedforward) 0
++ -t 7.155613101 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.155613101 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 7.155613101 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.155613101 -e sim_annotation 7.155613101 13 node 8 sendout packet (vectorbasedforward) 0
++ -t 7.224090304 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.224090304 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 7.224090304 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.224090304 -e sim_annotation 7.224090304 14 node 9 sendout packet (vectorbasedforward) 0
+d -t 7.330753553 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 7.330753553 -e sim_annotation 7.330753553 15 node 11 drop packet(vectorbasedforward) 0
+r -t 7.387991403 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.387991403 -e sim_annotation 7.387991403 16 node 10 receive packet(vectorbasedforward) 0
++ -t 7.388041403 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.388041403 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 7.388041403 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.388041403 -e sim_annotation 7.388041403 17 node 10 sendout packet (vectorbasedforward) 0
+r -t 7.409439139 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.409439139 -e sim_annotation 7.409439139 18 node 7 receive packet(vectorbasedforward) 0
++ -t 7.409489139 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.409489139 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 7.409489139 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.409489139 -e sim_annotation 7.409489139 19 node 7 sendout packet (vectorbasedforward) 0
+d -t 7.414983512 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 7.414983512 -e sim_annotation 7.414983512 20 node 11 drop packet(vectorbasedforward) 0
+r -t 7.679942501 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.679942501 -e sim_annotation 7.679942501 21 node 9 receive packet(vectorbasedforward) 0
+r -t 7.698822472 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.698822472 -e sim_annotation 7.698822472 22 node 6 receive packet(vectorbasedforward) 0
+d -t 7.722837974 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+v -t 7.722837974 -e sim_annotation 7.722837974 23 node 9 drop packet(vectorbasedforward) 0
++ -t 10.061653708 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.061653708 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 10.061653708 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.061653708 -e sim_annotation 10.061653708 24 node 10 sendout packet (vectorbasedforward) 0
++ -t 10.144089537 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.144089537 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 10.144089537 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.144089537 -e sim_annotation 10.144089537 25 node 7 sendout packet (vectorbasedforward) 0
+r -t 10.225554807 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.225554807 -e sim_annotation 10.225554807 26 node 9 receive packet(vectorbasedforward) 0
+r -t 10.305422870 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.305422870 -e sim_annotation 10.305422870 27 node 6 receive packet(vectorbasedforward) 0
++ -t 10.305472870 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.305472870 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 10.305472870 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.305472870 -e sim_annotation 10.305472870 28 node 6 sendout packet (vectorbasedforward) 0
+d -t 10.329438372 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 10.329438372 -e sim_annotation 10.329438372 29 node 9 drop packet(vectorbasedforward) 0
+r -t 10.594806204 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.594806204 -e sim_annotation 10.594806204 30 node 7 receive packet(vectorbasedforward) 0
+r -t 10.608613323 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.608613323 -e sim_annotation 10.608613323 31 node 5 receive packet(vectorbasedforward) 0
++ -t 11.508143776 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.508143776 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 11.508143776 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.508143776 -e sim_annotation 11.508143776 32 node 11 sendout packet (vectorbasedvoidavoidance) 0
+r -t 11.811284228 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.811284228 -e sim_annotation 11.811284228 33 node 8 receive packet(vectorbasedvoidavoidance) 0
+r -t 11.827036983 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.827036983 -e sim_annotation 11.827036983 34 node 9 receive packet(vectorbasedvoidavoidance) 0
++ -t 12.042593728 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 12.042593728 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 12.042593728 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 12.042593728 -e sim_annotation 12.042593728 35 node 11 sendout packet (vectorbasedforward) 1
+r -t 12.345734180 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 12.345734180 -e sim_annotation 12.345734180 36 node 8 receive packet(vectorbasedforward) 1
+r -t 12.361486935 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 12.361486935 -e sim_annotation 12.361486935 37 node 9 receive packet(vectorbasedforward) 1
++ -t 12.988528889 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 12.988528889 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 12.988528889 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 12.988528889 -e sim_annotation 12.988528889 38 node 6 sendout packet (vectorbasedforward) 0
+r -t 13.149862222 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 13.149862222 -e sim_annotation 13.149862222 39 node 7 receive packet(vectorbasedforward) 0
+r -t 13.163669341 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 13.163669341 -e sim_annotation 13.163669341 40 node 5 receive packet(vectorbasedforward) 0
++ -t 13.163719341 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 13.163719341 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 13.163719341 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 13.163719341 -e sim_annotation 13.163719341 41 node 5 sendout packet (vectorbasedforward) 0
+r -t 13.462406836 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 13.462406836 -e sim_annotation 13.462406836 42 node 4 receive packet(vectorbasedforward) 0
+r -t 13.466859793 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 13.466859793 -e sim_annotation 13.466859793 43 node 6 receive packet(vectorbasedforward) 0
++ -t 14.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 14.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 14.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 14.300025000 -e sim_annotation 14.300025000 44 node 11 sendout packet (vectorbasedforward) 0
+r -t 14.475165452 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 14.475165452 -e sim_annotation 14.475165452 45 node 8 receive packet(vectorbasedforward) 0
+r -t 14.490918208 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 14.490918208 -e sim_annotation 14.490918208 46 node 9 receive packet(vectorbasedforward) 0
++ -t 14.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 14.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 14.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 14.490968208 -e sim_annotation 14.490968208 47 node 9 sendout packet (vectorbasedforward) 1
++ -t 14.527608128 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 14.527608128 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 14.527608128 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 14.527608128 -e sim_annotation 14.527608128 48 node 8 sendout packet (vectorbasedvoidavoidance) 0
++ -t 14.527708128 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 14.527708128 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 14.527708128 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 14.527708128 -e sim_annotation 14.527708128 49 node 8 sendout packet (vectorbasedforward) 1
+r -t 14.782869306 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 14.782869306 -e sim_annotation 14.782869306 50 node 10 receive packet(vectorbasedforward) 1
+r -t 14.804317043 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 14.804317043 -e sim_annotation 14.804317043 51 node 7 receive packet(vectorbasedforward) 1
+d -t 14.809861415 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 14.809861415 -e sim_annotation 14.809861415 52 node 11 drop packet(vectorbasedforward) 1
+d -t 14.830748580 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC
+v -t 14.830748580 -e sim_annotation 14.830748580 53 node 11 drop packet(vectorbasedvoidavoidance) 0
+d -t 14.830848580 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 14.830848580 -e sim_annotation 14.830848580 54 node 11 drop packet(vectorbasedforward) 1
++ -t 15.910809754 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 15.910809754 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 15.910809754 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 15.910809754 -e sim_annotation 15.910809754 55 node 5 sendout packet (vectorbasedforward) 0
+r -t 16.081497249 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 16.081497249 -e sim_annotation 16.081497249 56 node 4 receive packet(vectorbasedforward) 0
++ -t 16.081547249 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 16.081547249 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 16.081547249 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 16.081547249 -e sim_annotation 16.081547249 57 node 4 sendout packet (vectorbasedforward) 0
+r -t 16.085950206 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 16.085950206 -e sim_annotation 16.085950206 58 node 6 receive packet(vectorbasedforward) 0
+r -t 16.380234744 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 16.380234744 -e sim_annotation 16.380234744 59 node 5 receive packet(vectorbasedforward) 0
+r -t 16.394507274 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 16.394507274 -e sim_annotation 16.394507274 60 node 3 receive packet(vectorbasedforward) 0
++ -t 17.199069198 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 17.199069198 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 17.199069198 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 17.199069198 -e sim_annotation 17.199069198 61 node 9 sendout packet (vectorbasedforward) 0
++ -t 17.208593463 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 17.208593463 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 17.208593463 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 17.208593463 -e sim_annotation 17.208593463 62 node 10 sendout packet (vectorbasedvoidavoidance) 0
++ -t 17.212169825 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 17.212169825 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 17.212169825 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 17.212169825 -e sim_annotation 17.212169825 63 node 8 sendout packet (vectorbasedforward) 0
+r -t 17.362970297 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 17.362970297 -e sim_annotation 17.362970297 64 node 10 receive packet(vectorbasedforward) 0
++ -t 17.363020297 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 17.363020297 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 17.363020297 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 17.363020297 -e sim_annotation 17.363020297 65 node 10 sendout packet (vectorbasedforward) 1
+r -t 17.384418033 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 17.384418033 -e sim_annotation 17.384418033 66 node 7 receive packet(vectorbasedforward) 0
++ -t 17.384468033 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 17.384468033 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 17.384468033 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 17.384468033 -e sim_annotation 17.384468033 67 node 7 sendout packet (vectorbasedforward) 1
+d -t 17.387310277 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 17.387310277 -e sim_annotation 17.387310277 68 node 11 drop packet(vectorbasedforward) 0
+d -t 17.389962406 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 17.389962406 -e sim_annotation 17.389962406 69 node 11 drop packet(vectorbasedforward) 0
+d -t 17.500494561 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 0 -k MAC
+v -t 17.500494561 -e sim_annotation 17.500494561 70 node 9 drop packet(vectorbasedvoidavoidance) 0
+d -t 17.654921396 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 17.654921396 -e sim_annotation 17.654921396 71 node 9 drop packet(vectorbasedforward) 1
+r -t 17.673801367 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 17.673801367 -e sim_annotation 17.673801367 72 node 6 receive packet(vectorbasedforward) 1
+d -t 17.697816869 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 17.697816869 -e sim_annotation 17.697816869 73 node 9 drop packet(vectorbasedforward) 1
++ -t 18.822230912 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 18.822230912 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 18.822230912 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 18.822230912 -e sim_annotation 18.822230912 74 node 4 sendout packet (vectorbasedforward) 0
+r -t 18.992918407 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 18.992918407 -e sim_annotation 18.992918407 75 node 5 receive packet(vectorbasedforward) 0
+r -t 19.007190937 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 19.007190937 -e sim_annotation 19.007190937 76 node 3 receive packet(vectorbasedforward) 0
++ -t 19.007240937 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 19.007240937 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 19.007240937 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 19.007240937 -e sim_annotation 19.007240937 77 node 3 sendout packet (vectorbasedforward) 0
+r -t 19.320200962 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 19.320200962 -e sim_annotation 19.320200962 78 node 4 receive packet(vectorbasedforward) 0
+r -t 19.326486490 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 19.326486490 -e sim_annotation 19.326486490 79 node 2 receive packet(vectorbasedforward) 0
++ -t 20.014109758 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 20.014109758 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 20.014109758 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 20.014109758 -e sim_annotation 20.014109758 80 node 10 sendout packet (vectorbasedforward) 0
++ -t 20.077949217 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 20.077949217 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 20.077949217 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 20.077949217 -e sim_annotation 20.077949217 81 node 7 sendout packet (vectorbasedforward) 0
+r -t 20.178010856 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 20.178010856 -e sim_annotation 20.178010856 82 node 9 receive packet(vectorbasedforward) 0
+r -t 20.239282550 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 20.239282550 -e sim_annotation 20.239282550 83 node 6 receive packet(vectorbasedforward) 0
++ -t 20.239332550 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 20.239332550 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 20.239332550 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 20.239332550 -e sim_annotation 20.239332550 84 node 6 sendout packet (vectorbasedforward) 1
+d -t 20.263298052 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 20.263298052 -e sim_annotation 20.263298052 85 node 9 drop packet(vectorbasedforward) 0
+r -t 20.528665884 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 20.528665884 -e sim_annotation 20.528665884 86 node 7 receive packet(vectorbasedforward) 1
+r -t 20.542473003 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 20.542473003 -e sim_annotation 20.542473003 87 node 5 receive packet(vectorbasedforward) 1
++ -t 21.481518085 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 21.481518085 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 21.481518085 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 21.481518085 -e sim_annotation 21.481518085 88 node 11 sendout packet (vectorbasedvoidavoidance) 1
++ -t 21.719019668 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 21.719019668 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 21.719019668 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 21.719019668 -e sim_annotation 21.719019668 89 node 3 sendout packet (vectorbasedforward) 0
+r -t 21.784658538 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 21.784658538 -e sim_annotation 21.784658538 90 node 8 receive packet(vectorbasedvoidavoidance) 1
+r -t 21.800411293 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 21.800411293 -e sim_annotation 21.800411293 91 node 9 receive packet(vectorbasedvoidavoidance) 1
+r -t 21.903979693 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 21.903979693 -e sim_annotation 21.903979693 92 node 4 receive packet(vectorbasedforward) 0
+r -t 21.910265221 -s 2 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 21.910265221 -e sim_annotation 21.910265221 93 node 2 receive packet(vectorbasedforward) 0
++ -t 21.910315221 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC 
+- -t 21.910315221 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC
+h -t 21.910315221 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 21.910315221 -e sim_annotation 21.910315221 94 node 2 sendout packet (vectorbasedforward) 0
++ -t 22.047976617 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC 
+- -t 22.047976617 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+h -t 22.047976617 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 22.047976617 -e sim_annotation 22.047976617 95 node 11 sendout packet (vectorbasedforward) 2
+r -t 22.192981888 -s 1 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.192981888 -e sim_annotation 22.192981888 96 node 1 receive packet(vectorbasedforward) 0
+r -t 22.220063606 -s 0 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.220063606 -e sim_annotation 22.220063606 97 node 0 receive packet(vectorbasedforward) 0
++ -t 22.220113606 -s 0 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 22.220113606 -s 0 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 22.220113606 -s 0 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.220113606 -e sim_annotation 22.220113606 98 node 0 sendout packet (vectorbasedforward) 0
+r -t 22.229560774 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.229560774 -e sim_annotation 22.229560774 99 node 3 receive packet(vectorbasedforward) 0
+r -t 22.351117069 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 22.351117069 -e sim_annotation 22.351117069 100 node 8 receive packet(vectorbasedforward) 2
+r -t 22.366869825 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 22.366869825 -e sim_annotation 22.366869825 101 node 9 receive packet(vectorbasedforward) 2
+r -t 22.375600977 -s 1 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.375600977 -e sim_annotation 22.375600977 102 node 1 receive packet(vectorbasedforward) 0
+r -t 22.401861991 -s 2 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.401861991 -e sim_annotation 22.401861991 103 node 2 receive packet(vectorbasedforward) 0
++ -t 22.922818428 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 22.922818428 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 22.922818428 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 22.922818428 -e sim_annotation 22.922818428 104 node 6 sendout packet (vectorbasedforward) 0
+r -t 23.084151761 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 23.084151761 -e sim_annotation 23.084151761 105 node 7 receive packet(vectorbasedforward) 0
+r -t 23.097958880 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 23.097958880 -e sim_annotation 23.097958880 106 node 5 receive packet(vectorbasedforward) 0
++ -t 23.098008880 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 23.098008880 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 23.098008880 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 23.098008880 -e sim_annotation 23.098008880 107 node 5 sendout packet (vectorbasedforward) 1
+r -t 23.396696375 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 23.396696375 -e sim_annotation 23.396696375 108 node 4 receive packet(vectorbasedforward) 1
+r -t 23.401149332 -s 6 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 23.401149332 -e sim_annotation 23.401149332 109 node 6 receive packet(vectorbasedforward) 1
++ -t 24.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 24.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 24.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 24.300025000 -e sim_annotation 24.300025000 110 node 11 sendout packet (vectorbasedforward) 0
++ -t 24.359445910 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 24.359445910 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 24.359445910 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 24.359445910 -e sim_annotation 24.359445910 111 node 9 sendout packet (vectorbasedvoidavoidance) 1
+r -t 24.475165452 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 24.475165452 -e sim_annotation 24.475165452 112 node 8 receive packet(vectorbasedforward) 0
+r -t 24.490918208 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 24.490918208 -e sim_annotation 24.490918208 113 node 9 receive packet(vectorbasedforward) 0
++ -t 24.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC 
+- -t 24.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+h -t 24.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 24.490968208 -e sim_annotation 24.490968208 114 node 9 sendout packet (vectorbasedforward) 2
++ -t 24.552889552 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 24.552889552 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 24.552889552 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 24.552889552 -e sim_annotation 24.552889552 115 node 8 sendout packet (vectorbasedvoidavoidance) 1
++ -t 24.552989552 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC 
+- -t 24.552989552 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+h -t 24.552989552 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 24.552989552 -e sim_annotation 24.552989552 116 node 8 sendout packet (vectorbasedforward) 2
+d -t 24.651347009 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 24.651347009 -e sim_annotation 24.651347009 117 node 10 drop packet(vectorbasedvoidavoidance) 1
+d -t 24.672794745 -s 7 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 24.672794745 -e sim_annotation 24.672794745 118 node 7 drop packet(vectorbasedvoidavoidance) 1
+d -t 24.678339118 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 24.678339118 -e sim_annotation 24.678339118 119 node 11 drop packet(vectorbasedvoidavoidance) 1
+d -t 24.782869306 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 24.782869306 -e sim_annotation 24.782869306 120 node 10 drop packet(vectorbasedforward) 2
+d -t 24.804317043 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 24.804317043 -e sim_annotation 24.804317043 121 node 7 drop packet(vectorbasedforward) 2
+d -t 24.809861415 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 24.809861415 -e sim_annotation 24.809861415 122 node 11 drop packet(vectorbasedforward) 2
+d -t 24.856030004 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+v -t 24.856030004 -e sim_annotation 24.856030004 123 node 11 drop packet(vectorbasedvoidavoidance) 1
+d -t 24.856130004 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 24.856130004 -e sim_annotation 24.856130004 124 node 11 drop packet(vectorbasedforward) 2
++ -t 25.751655923 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 25.751655923 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 25.751655923 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 25.751655923 -e sim_annotation 25.751655923 125 node 5 sendout packet (vectorbasedforward) 0
+r -t 25.922343418 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 25.922343418 -e sim_annotation 25.922343418 126 node 4 receive packet(vectorbasedforward) 0
++ -t 25.922393418 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 25.922393418 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 25.922393418 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 25.922393418 -e sim_annotation 25.922393418 127 node 4 sendout packet (vectorbasedforward) 1
+r -t 25.926796375 -s 6 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 25.926796375 -e sim_annotation 25.926796375 128 node 6 receive packet(vectorbasedforward) 0
+r -t 26.221080913 -s 5 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 26.221080913 -e sim_annotation 26.221080913 129 node 5 receive packet(vectorbasedforward) 1
+r -t 26.235353443 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 26.235353443 -e sim_annotation 26.235353443 130 node 3 receive packet(vectorbasedforward) 1
++ -t 27.159981470 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 27.159981470 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 27.159981470 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 27.159981470 -e sim_annotation 27.159981470 131 node 10 sendout packet (vectorbasedvoidavoidance) 1
++ -t 27.205294523 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 27.205294523 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 27.205294523 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 27.205294523 -e sim_annotation 27.205294523 132 node 8 sendout packet (vectorbasedforward) 0
+r -t 27.380434975 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 27.380434975 -e sim_annotation 27.380434975 133 node 11 receive packet(vectorbasedforward) 0
+d -t 27.424357030 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 27.424357030 -e sim_annotation 27.424357030 134 node 9 drop packet(vectorbasedforward) 0
+r -t 27.451882569 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 27.451882569 -e sim_annotation 27.451882569 135 node 9 receive packet(vectorbasedvoidavoidance) 1
++ -t 28.598259028 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 28.598259028 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 28.598259028 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 28.598259028 -e sim_annotation 28.598259028 136 node 4 sendout packet (vectorbasedforward) 0
+r -t 28.768946523 -s 5 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 28.768946523 -e sim_annotation 28.768946523 137 node 5 receive packet(vectorbasedforward) 0
+r -t 28.783219053 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 28.783219053 -e sim_annotation 28.783219053 138 node 3 receive packet(vectorbasedforward) 0
++ -t 28.783269053 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 28.783269053 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 28.783269053 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 28.783269053 -e sim_annotation 28.783269053 139 node 3 sendout packet (vectorbasedforward) 1
+r -t 29.096229078 -s 4 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 29.096229078 -e sim_annotation 29.096229078 140 node 4 receive packet(vectorbasedforward) 1
+r -t 29.102514606 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 29.102514606 -e sim_annotation 29.102514606 141 node 2 receive packet(vectorbasedforward) 1
++ -t 31.438294464 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 31.438294464 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 31.438294464 -s 3 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 31.438294464 -e sim_annotation 31.438294464 142 node 3 sendout packet (vectorbasedforward) 0
++ -t 31.449661968 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC 
+- -t 31.449661968 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+h -t 31.449661968 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 31.449661968 -e sim_annotation 31.449661968 143 node 11 sendout packet (vectorbasedvoidavoidance) 2
+r -t 31.623254489 -s 4 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 31.623254489 -e sim_annotation 31.623254489 144 node 4 receive packet(vectorbasedforward) 0
+r -t 31.629540017 -s 2 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 31.629540017 -e sim_annotation 31.629540017 145 node 2 receive packet(vectorbasedforward) 0
++ -t 31.629590017 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC 
+- -t 31.629590017 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC
+h -t 31.629590017 -s 2 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 31.629590017 -e sim_annotation 31.629590017 146 node 2 sendout packet (vectorbasedforward) 1
+r -t 31.752802420 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 31.752802420 -e sim_annotation 31.752802420 147 node 8 receive packet(vectorbasedvoidavoidance) 2
+r -t 31.768555176 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 31.768555176 -e sim_annotation 31.768555176 148 node 9 receive packet(vectorbasedvoidavoidance) 2
+r -t 31.912256684 -s 1 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 31.912256684 -e sim_annotation 31.912256684 149 node 1 receive packet(vectorbasedforward) 1
+r -t 31.939338402 -s 0 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 31.939338402 -e sim_annotation 31.939338402 150 node 0 receive packet(vectorbasedforward) 1
++ -t 31.939388402 -s 0 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 31.939388402 -s 0 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 31.939388402 -s 0 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 31.939388402 -e sim_annotation 31.939388402 151 node 0 sendout packet (vectorbasedforward) 0
+r -t 31.948835570 -s 3 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 1 -k MAC -R 100.000000
+v -t 31.948835570 -e sim_annotation 31.948835570 152 node 3 receive packet(vectorbasedforward) 1
++ -t 32.091586755 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC 
+- -t 32.091586755 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+h -t 32.091586755 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 32.091586755 -e sim_annotation 32.091586755 153 node 11 sendout packet (vectorbasedforward) 3
+r -t 32.094875773 -s 1 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 32.094875773 -e sim_annotation 32.094875773 154 node 1 receive packet(vectorbasedforward) 0
+r -t 32.121136787 -s 2 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 32.121136787 -e sim_annotation 32.121136787 155 node 2 receive packet(vectorbasedforward) 0
+r -t 32.394727207 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 32.394727207 -e sim_annotation 32.394727207 156 node 8 receive packet(vectorbasedforward) 3
+r -t 32.410479962 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 32.410479962 -e sim_annotation 32.410479962 157 node 9 receive packet(vectorbasedforward) 3
++ -t 34.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 34.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 34.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 34.300025000 -e sim_annotation 34.300025000 158 node 11 sendout packet (vectorbasedforward) 0
+r -t 34.475165452 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 34.475165452 -e sim_annotation 34.475165452 159 node 8 receive packet(vectorbasedforward) 0
++ -t 34.486606880 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC 
+- -t 34.486606880 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+h -t 34.486606880 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 34.486606880 -e sim_annotation 34.486606880 160 node 8 sendout packet (vectorbasedvoidavoidance) 2
++ -t 34.486706880 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC 
+- -t 34.486706880 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+h -t 34.486706880 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 34.486706880 -e sim_annotation 34.486706880 161 node 8 sendout packet (vectorbasedforward) 3
+r -t 34.490918208 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 34.490918208 -e sim_annotation 34.490918208 162 node 9 receive packet(vectorbasedforward) 0
++ -t 34.521161392 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC 
+- -t 34.521161392 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+h -t 34.521161392 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC -R 100.000000
+v -t 34.521161392 -e sim_annotation 34.521161392 163 node 9 sendout packet (vectorbasedvoidavoidance) 2
++ -t 34.521261392 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC 
+- -t 34.521261392 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+h -t 34.521261392 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 34.521261392 -e sim_annotation 34.521261392 164 node 9 sendout packet (vectorbasedforward) 3
+d -t 34.789747332 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 34.789747332 -e sim_annotation 34.789747332 165 node 11 drop packet(vectorbasedvoidavoidance) 2
+d -t 34.789847332 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 34.789847332 -e sim_annotation 34.789847332 166 node 11 drop packet(vectorbasedforward) 3
+d -t 34.813062491 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 34.813062491 -e sim_annotation 34.813062491 167 node 10 drop packet(vectorbasedvoidavoidance) 2
+d -t 34.813162491 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 34.813162491 -e sim_annotation 34.813162491 168 node 10 drop packet(vectorbasedforward) 3
+d -t 34.834510228 -s 7 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 34.834510228 -e sim_annotation 34.834510228 169 node 7 drop packet(vectorbasedvoidavoidance) 2
+d -t 34.834610228 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 34.834610228 -e sim_annotation 34.834610228 170 node 7 drop packet(vectorbasedforward) 3
+d -t 34.840054600 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 2 -k MAC
+v -t 34.840054600 -e sim_annotation 34.840054600 171 node 11 drop packet(vectorbasedvoidavoidance) 2
+d -t 34.840154600 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 34.840154600 -e sim_annotation 34.840154600 172 node 11 drop packet(vectorbasedforward) 3
++ -t 37.143931807 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 37.143931807 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 37.143931807 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 37.143931807 -e sim_annotation 37.143931807 173 node 9 sendout packet (vectorbasedforward) 0
++ -t 37.149834196 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 37.149834196 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 37.149834196 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 37.149834196 -e sim_annotation 37.149834196 174 node 8 sendout packet (vectorbasedforward) 0
+r -t 37.307832906 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 37.307832906 -e sim_annotation 37.307832906 175 node 10 receive packet(vectorbasedforward) 0
+d -t 37.324974648 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 37.324974648 -e sim_annotation 37.324974648 176 node 11 drop packet(vectorbasedforward) 0
+r -t 37.329280643 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 37.329280643 -e sim_annotation 37.329280643 177 node 7 receive packet(vectorbasedforward) 0
+d -t 37.334825015 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 37.334825015 -e sim_annotation 37.334825015 178 node 11 drop packet(vectorbasedforward) 0
++ -t 41.473024125 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC 
+- -t 41.473024125 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+h -t 41.473024125 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 41.473024125 -e sim_annotation 41.473024125 179 node 11 sendout packet (vectorbasedvoidavoidance) 3
+r -t 41.776164577 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 41.776164577 -e sim_annotation 41.776164577 180 node 8 receive packet(vectorbasedvoidavoidance) 3
+r -t 41.791917333 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 41.791917333 -e sim_annotation 41.791917333 181 node 9 receive packet(vectorbasedvoidavoidance) 3
++ -t 42.070696564 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC 
+- -t 42.070696564 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+h -t 42.070696564 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 42.070696564 -e sim_annotation 42.070696564 182 node 11 sendout packet (vectorbasedforward) 4
+r -t 42.373837016 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 42.373837016 -e sim_annotation 42.373837016 183 node 8 receive packet(vectorbasedforward) 4
+r -t 42.389589772 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 42.389589772 -e sim_annotation 42.389589772 184 node 9 receive packet(vectorbasedforward) 4
++ -t 44.297910402 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC 
+- -t 44.297910402 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+h -t 44.297910402 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 44.297910402 -e sim_annotation 44.297910402 185 node 9 sendout packet (vectorbasedvoidavoidance) 3
++ -t 44.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 44.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 44.300025000 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 44.300025000 -e sim_annotation 44.300025000 186 node 11 sendout packet (vectorbasedforward) 0
++ -t 44.315261817 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC 
+- -t 44.315261817 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+h -t 44.315261817 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC -R 100.000000
+v -t 44.315261817 -e sim_annotation 44.315261817 187 node 8 sendout packet (vectorbasedvoidavoidance) 3
+r -t 44.475165452 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 44.475165452 -e sim_annotation 44.475165452 188 node 8 receive packet(vectorbasedforward) 0
++ -t 44.475215452 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC 
+- -t 44.475215452 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+h -t 44.475215452 -s 8 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 44.475215452 -e sim_annotation 44.475215452 189 node 8 sendout packet (vectorbasedforward) 4
+r -t 44.490918208 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 44.490918208 -e sim_annotation 44.490918208 190 node 9 receive packet(vectorbasedforward) 0
++ -t 44.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC 
+- -t 44.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+h -t 44.490968208 -s 9 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 44.490968208 -e sim_annotation 44.490968208 191 node 9 sendout packet (vectorbasedforward) 4
+d -t 44.589811501 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 44.589811501 -e sim_annotation 44.589811501 192 node 10 drop packet(vectorbasedvoidavoidance) 3
+d -t 44.611259237 -s 7 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 44.611259237 -e sim_annotation 44.611259237 193 node 7 drop packet(vectorbasedvoidavoidance) 3
+d -t 44.616803610 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 44.616803610 -e sim_annotation 44.616803610 194 node 11 drop packet(vectorbasedvoidavoidance) 3
+d -t 44.618402269 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 3 -k MAC
+v -t 44.618402269 -e sim_annotation 44.618402269 195 node 11 drop packet(vectorbasedvoidavoidance) 3
+d -t 44.778355904 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+v -t 44.778355904 -e sim_annotation 44.778355904 196 node 11 drop packet(vectorbasedforward) 4
+d -t 44.782869306 -s 10 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+v -t 44.782869306 -e sim_annotation 44.782869306 197 node 10 drop packet(vectorbasedforward) 4
+d -t 44.804317043 -s 7 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+v -t 44.804317043 -e sim_annotation 44.804317043 198 node 7 drop packet(vectorbasedforward) 4
+d -t 44.809861415 -s 11 -d -1 -p vectorbasedforward -e 320 -c 2 -a 0 -i 4 -k MAC
+v -t 44.809861415 -e sim_annotation 44.809861415 199 node 11 drop packet(vectorbasedforward) 4
++ -t 47.184211804 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 47.184211804 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 47.184211804 -s 8 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 47.184211804 -e sim_annotation 47.184211804 200 node 8 sendout packet (vectorbasedforward) 0
++ -t 47.220800105 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC 
+- -t 47.220800105 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+h -t 47.220800105 -s 9 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 47.220800105 -e sim_annotation 47.220800105 201 node 9 sendout packet (vectorbasedforward) 0
+d -t 47.359352256 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 47.359352256 -e sim_annotation 47.359352256 202 node 11 drop packet(vectorbasedforward) 0
+r -t 47.384701204 -s 10 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 47.384701204 -e sim_annotation 47.384701204 203 node 10 receive packet(vectorbasedforward) 0
+r -t 47.406148940 -s 7 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 47.406148940 -e sim_annotation 47.406148940 204 node 7 receive packet(vectorbasedforward) 0
+d -t 47.411693312 -s 11 -d -1 -p vectorbasedforward -e 160 -c 2 -a 0 -i 0 -k MAC
+v -t 47.411693312 -e sim_annotation 47.411693312 205 node 11 drop packet(vectorbasedforward) 0
++ -t 51.507945286 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC 
+- -t 51.507945286 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC
+h -t 51.507945286 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 51.507945286 -e sim_annotation 51.507945286 206 node 11 sendout packet (vectorbasedvoidavoidance) 4
+r -t 51.811085738 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 51.811085738 -e sim_annotation 51.811085738 207 node 8 receive packet(vectorbasedvoidavoidance) 4
+r -t 51.826838493 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 51.826838493 -e sim_annotation 51.826838493 208 node 9 receive packet(vectorbasedvoidavoidance) 4
++ -t 54.327636302 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC 
+- -t 54.327636302 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC
+h -t 54.327636302 -s 8 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 54.327636302 -e sim_annotation 54.327636302 209 node 8 sendout packet (vectorbasedvoidavoidance) 4
++ -t 54.376320769 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC 
+- -t 54.376320769 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC
+h -t 54.376320769 -s 9 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 54.376320769 -e sim_annotation 54.376320769 210 node 9 sendout packet (vectorbasedvoidavoidance) 4
+d -t 54.630776754 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC
+v -t 54.630776754 -e sim_annotation 54.630776754 211 node 11 drop packet(vectorbasedvoidavoidance) 4
+r -t 54.668221868 -s 10 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 54.668221868 -e sim_annotation 54.668221868 212 node 10 receive packet(vectorbasedvoidavoidance) 4
+r -t 54.689669604 -s 7 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC -R 100.000000
+v -t 54.689669604 -e sim_annotation 54.689669604 213 node 7 receive packet(vectorbasedvoidavoidance) 4
+d -t 54.695213976 -s 11 -d -1 -p vectorbasedvoidavoidance -e 320 -c 2 -a 0 -i 4 -k MAC
+v -t 54.695213976 -e sim_annotation 54.695213976 214 node 11 drop packet(vectorbasedvoidavoidance) 4
+W -t 100

@@ -1,0 +1,602 @@
+n -t 0.000000 -s 0 -x 65.270534 -y 65.622035 -U -5.694633 -V 0.410925 -T 2.215435
+n -t 0.000000 -s 1 -x 9.540325 -y 97.761990 -U 0.933866 -V -1.375464 -T 24.489786
+n -t 0.000000 -s 2 -x 85.768879 -y 94.854334 -U -1.435299 -V -0.720865 -T 8.001805
+n -t 0.000000 -s 3 -x 16.789096 -y 53.660021 -U 2.829123 -V 1.411217 -T 20.939866
+n -t 0.000000 -s 4 -x 63.980028 -y 76.520920 -U -1.360400 -V -4.885007 -T 11.111324
+n -t 0.000000 -s 5 -x 87.094196 -y 28.076110 -U -5.978855 -V -0.440209 -T 5.038731
+n -t 0.000000 -s 6 -x 75.185494 -y 97.159675 -U 1.046345 -V -4.462006 -T 16.038556
+n -t 0.000000 -s 7 -x 62.663905 -y 28.081560 -U 4.026747 -V -1.564275 -T 5.050800
+n -t 0.000000 -s 8 -x 66.771233 -y 41.761066 -U 4.147500 -V -4.239745 -T 2.230975
+n -t 0.000000 -s 9 -x 78.237700 -y 32.271808 -U -3.632148 -V 3.712125 -T 9.635019
+n -t 0 -s 0 -S DLABEL -l "Sink" -L ""
+n -t * -s 0  -x 65.270533722485666 -y 65.622034885744583 -Z 0 -z 7  -v circle -c green
+n -t * -s 1  -x 9.5403247091641301 -y 97.761990175471638 -Z 0 -z 4  -v circle -c green
+n -t * -s 2  -x 85.768879151795474 -y 94.854333854678245 -Z 0 -z 4  -v circle -c green
+n -t * -s 3  -x 16.78909557722001 -y 53.660021421341227 -Z 0 -z 4  -v circle -c green
+n -t * -s 4  -x 63.980028482144711 -y 76.520919509474624 -Z 0 -z 4  -v circle -c green
+n -t * -s 5  -x 87.09419573987563 -y 28.076110281085647 -Z 0 -z 4  -v circle -c green
+n -t * -s 6  -x 75.185494206466473 -y 97.159675367716545 -Z 0 -z 4  -v circle -c green
+n -t * -s 7  -x 62.663905212033498 -y 28.081559542604516 -Z 0 -z 4  -v circle -c green
+n -t * -s 8  -x 66.77123255411685 -y 41.761066085547704 -Z 0 -z 4  -v circle -c green
+n -t * -s 9  -x 78.237699800281646 -y 32.271808121479957 -Z 0 -z 4  -v circle -c green
+V -t * -v 1.0a5 -a 0
+W -t * -x 100 -y 100
+A -t * -n 1 -p 0 -o 0xffffffff -c 31 -a 1
+A -t * -h 1 -m 2147483647 -s 0
++ -t 0.000693913 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.000693913 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.000693913 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.000693913 -e sim_annotation 0.000693913 1 node 7 sendout packet (UnderwaterTmac) 0
++ -t 0.040480200 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.040480200 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.040480200 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.040480200 -e sim_annotation 0.040480200 2 node 2 sendout packet (UnderwaterTmac) 0
++ -t 0.184131601 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.184131601 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.184131601 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.184131601 -e sim_annotation 0.184131601 3 node 3 sendout packet (UnderwaterTmac) 0
++ -t 0.184199687 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.184199687 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.184199687 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.184199687 -e sim_annotation 0.184199687 4 node 6 sendout packet (UnderwaterTmac) 0
++ -t 0.188609608 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.188609608 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.188609608 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.188609608 -e sim_annotation 0.188609608 5 node 8 sendout packet (UnderwaterTmac) 0
++ -t 0.361133539 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.361133539 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.361133539 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.361133539 -e sim_annotation 0.361133539 6 node 4 sendout packet (UnderwaterTmac) 0
++ -t 0.445677285 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.445677285 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.445677285 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.445677285 -e sim_annotation 0.445677285 7 node 0 sendout packet (UnderwaterTmac) 0
++ -t 0.809680407 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.809680407 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.809680407 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.809680407 -e sim_annotation 0.809680407 8 node 9 sendout packet (UnderwaterTmac) 0
++ -t 0.909789735 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.909789735 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.909789735 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.909789735 -e sim_annotation 0.909789735 9 node 1 sendout packet (UnderwaterTmac) 0
++ -t 0.922688107 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 0.922688107 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 0.922688107 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 0.922688107 -e sim_annotation 0.922688107 10 node 5 sendout packet (UnderwaterTmac) 0
++ -t 1.513324490 -s 7 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.513324490 -s 7 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.513324490 -s 7 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.513324490 -e sim_annotation 1.513324490 11 node 7 sendout packet (UnderwaterTmac) 0
++ -t 1.587230065 -s 8 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.587230065 -s 8 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.587230065 -s 8 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.587230065 -e sim_annotation 1.587230065 12 node 8 sendout packet (UnderwaterTmac) 0
++ -t 1.636358213 -s 1 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.636358213 -s 1 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.636358213 -s 1 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.636358213 -e sim_annotation 1.636358213 13 node 1 sendout packet (UnderwaterTmac) 0
++ -t 1.656220690 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.656220690 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.656220690 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.656220690 -e sim_annotation 1.656220690 14 node 5 sendout packet (UnderwaterTmac) 0
++ -t 1.740818436 -s 3 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.740818436 -s 3 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.740818436 -s 3 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.740818436 -e sim_annotation 1.740818436 15 node 3 sendout packet (UnderwaterTmac) 0
++ -t 1.766045765 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.766045765 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.766045765 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.766045765 -e sim_annotation 1.766045765 16 node 5 sendout packet (UnderwaterTmac) 0
++ -t 1.874291556 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.874291556 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.874291556 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.874291556 -e sim_annotation 1.874291556 17 node 1 sendout packet (UnderwaterTmac) 0
++ -t 1.891669644 -s 8 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.891669644 -s 8 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.891669644 -s 8 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.891669644 -e sim_annotation 1.891669644 18 node 8 sendout packet (UnderwaterTmac) 0
++ -t 1.979907878 -s 3 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.979907878 -s 3 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.979907878 -s 3 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.979907878 -e sim_annotation 1.979907878 19 node 3 sendout packet (UnderwaterTmac) 0
++ -t 1.992271065 -s 5 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 1.992271065 -s 5 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 1.992271065 -s 5 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 1.992271065 -e sim_annotation 1.992271065 20 node 5 sendout packet (UnderwaterTmac) 0
++ -t 2.002023968 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.002023968 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.002023968 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.002023968 -e sim_annotation 2.002023968 21 node 6 sendout packet (UnderwaterTmac) 0
++ -t 2.079769662 -s 0 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.079769662 -s 0 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.079769662 -s 0 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.079769662 -e sim_annotation 2.079769662 22 node 0 sendout packet (UnderwaterTmac) 0
++ -t 2.142471180 -s 7 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.142471180 -s 7 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.142471180 -s 7 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.142471180 -e sim_annotation 2.142471180 23 node 7 sendout packet (UnderwaterTmac) 0
++ -t 2.159142470 -s 3 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.159142470 -s 3 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.159142470 -s 3 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.159142470 -e sim_annotation 2.159142470 24 node 3 sendout packet (UnderwaterTmac) 0
++ -t 2.270149234 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.270149234 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.270149234 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.270149234 -e sim_annotation 2.270149234 25 node 1 sendout packet (UnderwaterTmac) 0
++ -t 2.274280946 -s 9 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.274280946 -s 9 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.274280946 -s 9 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.274280946 -e sim_annotation 2.274280946 26 node 9 sendout packet (UnderwaterTmac) 0
++ -t 2.328071047 -s 8 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.328071047 -s 8 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.328071047 -s 8 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.328071047 -e sim_annotation 2.328071047 27 node 8 sendout packet (UnderwaterTmac) 0
++ -t 2.351716699 -s 3 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.351716699 -s 3 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.351716699 -s 3 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.351716699 -e sim_annotation 2.351716699 28 node 3 sendout packet (UnderwaterTmac) 0
++ -t 2.352505684 -s 2 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.352505684 -s 2 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.352505684 -s 2 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.352505684 -e sim_annotation 2.352505684 29 node 2 sendout packet (UnderwaterTmac) 0
++ -t 2.375543649 -s 8 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.375543649 -s 8 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.375543649 -s 8 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.375543649 -e sim_annotation 2.375543649 30 node 8 sendout packet (UnderwaterTmac) 0
+n -t 2.400000 -s 0 -x 52.654443 -y 66.532412 -U 1.274090 -V -0.544235 -T 30.081011
+n -t 2.400000 -s 8 -x 76.024199 -y 32.302303 -U -2.645523 -V 4.539257 -T 13.694346
++ -t 2.455626895 -s 7 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.455626895 -s 7 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.455626895 -s 7 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.455626895 -e sim_annotation 2.455626895 31 node 7 sendout packet (UnderwaterTmac) 0
++ -t 2.457153996 -s 9 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.457153996 -s 9 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.457153996 -s 9 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.457153996 -e sim_annotation 2.457153996 32 node 9 sendout packet (UnderwaterTmac) 0
++ -t 2.484242525 -s 1 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 2.484242525 -s 1 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 2.484242525 -s 1 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 2.484242525 -e sim_annotation 2.484242525 33 node 1 sendout packet (UnderwaterTmac) 0
++ -t 3.091861662 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.091861662 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.091861662 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.091861662 -e sim_annotation 3.091861662 34 node 5 sendout packet (UnderwaterTmac) 0
++ -t 3.162698813 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.162698813 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.162698813 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.162698813 -e sim_annotation 3.162698813 35 node 7 sendout packet (UnderwaterTmac) 0
++ -t 3.331974671 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.331974671 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.331974671 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.331974671 -e sim_annotation 3.331974671 36 node 2 sendout packet (UnderwaterTmac) 0
++ -t 3.427976385 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.427976385 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.427976385 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.427976385 -e sim_annotation 3.427976385 37 node 4 sendout packet (UnderwaterTmac) 0
++ -t 3.669665441 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.669665441 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.669665441 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.669665441 -e sim_annotation 3.669665441 38 node 9 sendout packet (UnderwaterTmac) 0
++ -t 3.776547978 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.776547978 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.776547978 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.776547978 -e sim_annotation 3.776547978 39 node 0 sendout packet (UnderwaterTmac) 0
++ -t 3.841917595 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.841917595 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.841917595 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.841917595 -e sim_annotation 3.841917595 40 node 1 sendout packet (UnderwaterTmac) 0
++ -t 3.870491473 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.870491473 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.870491473 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.870491473 -e sim_annotation 3.870491473 41 node 6 sendout packet (UnderwaterTmac) 0
++ -t 3.962404049 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.962404049 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.962404049 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.962404049 -e sim_annotation 3.962404049 42 node 3 sendout packet (UnderwaterTmac) 0
++ -t 3.988568467 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 3.988568467 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 3.988568467 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 3.988568467 -e sim_annotation 3.988568467 43 node 8 sendout packet (UnderwaterTmac) 0
++ -t 4.534298994 -s 2 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.534298994 -s 2 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.534298994 -s 2 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.534298994 -e sim_annotation 4.534298994 44 node 2 sendout packet (UnderwaterTmac) 0
++ -t 4.569977735 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.569977735 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.569977735 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.569977735 -e sim_annotation 4.569977735 45 node 1 sendout packet (UnderwaterTmac) 0
++ -t 4.571866954 -s 3 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.571866954 -s 3 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.571866954 -s 3 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.571866954 -e sim_annotation 4.571866954 46 node 3 sendout packet (UnderwaterTmac) 0
++ -t 4.653181721 -s 3 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.653181721 -s 3 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.653181721 -s 3 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.653181721 -e sim_annotation 4.653181721 47 node 3 sendout packet (UnderwaterTmac) 0
++ -t 4.658869514 -s 5 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.658869514 -s 5 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.658869514 -s 5 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.658869514 -e sim_annotation 4.658869514 48 node 5 sendout packet (UnderwaterTmac) 0
++ -t 4.666950305 -s 0 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.666950305 -s 0 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.666950305 -s 0 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.666950305 -e sim_annotation 4.666950305 49 node 0 sendout packet (UnderwaterTmac) 0
++ -t 4.712637203 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.712637203 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.712637203 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.712637203 -e sim_annotation 4.712637203 50 node 9 sendout packet (UnderwaterTmac) 0
++ -t 4.726057793 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.726057793 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.726057793 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.726057793 -e sim_annotation 4.726057793 51 node 5 sendout packet (UnderwaterTmac) 0
++ -t 4.754003269 -s 1 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.754003269 -s 1 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.754003269 -s 1 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.754003269 -e sim_annotation 4.754003269 52 node 1 sendout packet (UnderwaterTmac) 0
++ -t 4.787677061 -s 7 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.787677061 -s 7 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.787677061 -s 7 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.787677061 -e sim_annotation 4.787677061 53 node 7 sendout packet (UnderwaterTmac) 0
++ -t 4.797991972 -s 8 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.797991972 -s 8 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.797991972 -s 8 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.797991972 -e sim_annotation 4.797991972 54 node 8 sendout packet (UnderwaterTmac) 0
++ -t 4.831034298 -s 8 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.831034298 -s 8 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.831034298 -s 8 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.831034298 -e sim_annotation 4.831034298 55 node 8 sendout packet (UnderwaterTmac) 0
++ -t 4.886640032 -s 6 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.886640032 -s 6 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.886640032 -s 6 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.886640032 -e sim_annotation 4.886640032 56 node 6 sendout packet (UnderwaterTmac) 0
++ -t 4.890915574 -s 9 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.890915574 -s 9 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.890915574 -s 9 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.890915574 -e sim_annotation 4.890915574 57 node 9 sendout packet (UnderwaterTmac) 0
++ -t 4.954906657 -s 2 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.954906657 -s 2 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.954906657 -s 2 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.954906657 -e sim_annotation 4.954906657 58 node 2 sendout packet (UnderwaterTmac) 0
++ -t 4.972628847 -s 3 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.972628847 -s 3 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.972628847 -s 3 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.972628847 -e sim_annotation 4.972628847 59 node 3 sendout packet (UnderwaterTmac) 0
++ -t 4.972650522 -s 8 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 4.972650522 -s 8 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 4.972650522 -s 8 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 4.972650522 -e sim_annotation 4.972650522 60 node 8 sendout packet (UnderwaterTmac) 0
++ -t 5.022771118 -s 0 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.022771118 -s 0 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.022771118 -s 0 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.022771118 -e sim_annotation 5.022771118 61 node 0 sendout packet (UnderwaterTmac) 0
++ -t 5.082754962 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.082754962 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.082754962 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.082754962 -e sim_annotation 5.082754962 62 node 9 sendout packet (UnderwaterTmac) 0
+n -t 5.100000 -s 5 -x 56.968352 -y 25.858018 -U 1.763772 -V 3.450566 -T 4.425665
+n -t 5.100000 -s 7 -x 83.002197 -y 20.180720 -U -0.603656 -V 5.316860 -T 4.360917
++ -t 5.128372294 -s 4 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.128372294 -s 4 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.128372294 -s 4 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.128372294 -e sim_annotation 5.128372294 63 node 4 sendout packet (UnderwaterTmac) 0
++ -t 5.199390172 -s 1 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.199390172 -s 1 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.199390172 -s 1 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.199390172 -e sim_annotation 5.199390172 64 node 1 sendout packet (UnderwaterTmac) 0
++ -t 5.213402745 -s 6 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.213402745 -s 6 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.213402745 -s 6 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.213402745 -e sim_annotation 5.213402745 65 node 6 sendout packet (UnderwaterTmac) 0
++ -t 5.244496596 -s 1 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.244496596 -s 1 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.244496596 -s 1 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.244496596 -e sim_annotation 5.244496596 66 node 1 sendout packet (UnderwaterTmac) 0
++ -t 5.362306501 -s 3 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.362306501 -s 3 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.362306501 -s 3 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.362306501 -e sim_annotation 5.362306501 67 node 3 sendout packet (UnderwaterTmac) 0
++ -t 5.431794209 -s 6 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.431794209 -s 6 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.431794209 -s 6 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.431794209 -e sim_annotation 5.431794209 68 node 6 sendout packet (UnderwaterTmac) 0
++ -t 5.465063991 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.465063991 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.465063991 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.465063991 -e sim_annotation 5.465063991 69 node 1 sendout packet (UnderwaterTmac) 0
++ -t 5.481263819 -s 2 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.481263819 -s 2 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.481263819 -s 2 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.481263819 -e sim_annotation 5.481263819 70 node 2 sendout packet (UnderwaterTmac) 0
++ -t 5.487364716 -s 4 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 5.487364716 -s 4 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 5.487364716 -s 4 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 5.487364716 -e sim_annotation 5.487364716 71 node 4 sendout packet (UnderwaterTmac) 0
++ -t 6.069693053 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.069693053 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.069693053 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.069693053 -e sim_annotation 6.069693053 72 node 9 sendout packet (UnderwaterTmac) 0
++ -t 6.131096445 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.131096445 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.131096445 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.131096445 -e sim_annotation 6.131096445 73 node 4 sendout packet (UnderwaterTmac) 0
++ -t 6.210645036 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.210645036 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.210645036 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.210645036 -e sim_annotation 6.210645036 74 node 1 sendout packet (UnderwaterTmac) 0
++ -t 6.214139741 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.214139741 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.214139741 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.214139741 -e sim_annotation 6.214139741 75 node 8 sendout packet (UnderwaterTmac) 0
++ -t 6.392957930 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.392957930 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.392957930 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.392957930 -e sim_annotation 6.392957930 76 node 7 sendout packet (UnderwaterTmac) 0
++ -t 6.578628917 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.578628917 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.578628917 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.578628917 -e sim_annotation 6.578628917 77 node 5 sendout packet (UnderwaterTmac) 0
++ -t 6.600379079 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.600379079 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.600379079 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.600379079 -e sim_annotation 6.600379079 78 node 2 sendout packet (UnderwaterTmac) 0
++ -t 6.758866459 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.758866459 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.758866459 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.758866459 -e sim_annotation 6.758866459 79 node 0 sendout packet (UnderwaterTmac) 0
++ -t 6.874560389 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.874560389 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.874560389 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.874560389 -e sim_annotation 6.874560389 80 node 3 sendout packet (UnderwaterTmac) 0
++ -t 6.971410414 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 6.971410414 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 6.971410414 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 6.971410414 -e sim_annotation 6.971410414 81 node 6 sendout packet (UnderwaterTmac) 0
++ -t 7.500327932 -s 2 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.500327932 -s 2 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.500327932 -s 2 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.500327932 -e sim_annotation 7.500327932 82 node 2 sendout packet (UnderwaterTmac) 0
++ -t 7.529681026 -s 1 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.529681026 -s 1 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.529681026 -s 1 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.529681026 -e sim_annotation 7.529681026 83 node 1 sendout packet (UnderwaterTmac) 0
++ -t 7.540293509 -s 2 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.540293509 -s 2 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.540293509 -s 2 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.540293509 -e sim_annotation 7.540293509 84 node 2 sendout packet (UnderwaterTmac) 0
++ -t 7.570452213 -s 5 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.570452213 -s 5 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.570452213 -s 5 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.570452213 -e sim_annotation 7.570452213 85 node 5 sendout packet (UnderwaterTmac) 0
++ -t 7.624196032 -s 8 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.624196032 -s 8 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.624196032 -s 8 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.624196032 -e sim_annotation 7.624196032 86 node 8 sendout packet (UnderwaterTmac) 0
++ -t 7.635616821 -s 3 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.635616821 -s 3 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.635616821 -s 3 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.635616821 -e sim_annotation 7.635616821 87 node 3 sendout packet (UnderwaterTmac) 0
++ -t 7.678366968 -s 3 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.678366968 -s 3 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.678366968 -s 3 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.678366968 -e sim_annotation 7.678366968 88 node 3 sendout packet (UnderwaterTmac) 0
++ -t 7.689812468 -s 4 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.689812468 -s 4 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.689812468 -s 4 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.689812468 -e sim_annotation 7.689812468 89 node 4 sendout packet (UnderwaterTmac) 0
++ -t 7.752977164 -s 7 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.752977164 -s 7 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.752977164 -s 7 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.752977164 -e sim_annotation 7.752977164 90 node 7 sendout packet (UnderwaterTmac) 0
++ -t 7.755920001 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.755920001 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.755920001 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.755920001 -e sim_annotation 7.755920001 91 node 6 sendout packet (UnderwaterTmac) 0
++ -t 7.793064570 -s 1 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.793064570 -s 1 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.793064570 -s 1 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.793064570 -e sim_annotation 7.793064570 92 node 1 sendout packet (UnderwaterTmac) 0
++ -t 7.817911751 -s 4 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.817911751 -s 4 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.817911751 -s 4 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.817911751 -e sim_annotation 7.817911751 93 node 4 sendout packet (UnderwaterTmac) 0
++ -t 7.870732277 -s 8 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.870732277 -s 8 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.870732277 -s 8 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.870732277 -e sim_annotation 7.870732277 94 node 8 sendout packet (UnderwaterTmac) 0
++ -t 7.918593976 -s 5 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.918593976 -s 5 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.918593976 -s 5 -d 2 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.918593976 -e sim_annotation 7.918593976 95 node 5 sendout packet (UnderwaterTmac) 0
++ -t 7.957593574 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.957593574 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.957593574 -s 1 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.957593574 -e sim_annotation 7.957593574 96 node 1 sendout packet (UnderwaterTmac) 0
++ -t 7.964129137 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 7.964129137 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 7.964129137 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 7.964129137 -e sim_annotation 7.964129137 97 node 5 sendout packet (UnderwaterTmac) 0
++ -t 8.027490785 -s 9 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.027490785 -s 9 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.027490785 -s 9 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.027490785 -e sim_annotation 8.027490785 98 node 9 sendout packet (UnderwaterTmac) 0
+n -t 8.100000 -s 2 -x 74.283895 -y 89.086116 -U -2.004748 -V -2.264858 -T 36.083404
++ -t 8.102120722 -s 3 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.102120722 -s 3 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.102120722 -s 3 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.102120722 -e sim_annotation 8.102120722 99 node 3 sendout packet (UnderwaterTmac) 0
++ -t 8.121781496 -s 6 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.121781496 -s 6 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.121781496 -s 6 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.121781496 -e sim_annotation 8.121781496 100 node 6 sendout packet (UnderwaterTmac) 0
++ -t 8.188114193 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.188114193 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.188114193 -s 5 -d 7 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.188114193 -e sim_annotation 8.188114193 101 node 5 sendout packet (UnderwaterTmac) 0
++ -t 8.197204863 -s 8 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.197204863 -s 8 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.197204863 -s 8 -d 3 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.197204863 -e sim_annotation 8.197204863 102 node 8 sendout packet (UnderwaterTmac) 0
++ -t 8.242612850 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.242612850 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.242612850 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.242612850 -e sim_annotation 8.242612850 103 node 9 sendout packet (UnderwaterTmac) 0
++ -t 8.265182767 -s 2 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.265182767 -s 2 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.265182767 -s 2 -d 6 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.265182767 -e sim_annotation 8.265182767 104 node 2 sendout packet (UnderwaterTmac) 0
++ -t 8.413268706 -s 7 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.413268706 -s 7 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.413268706 -s 7 -d 1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.413268706 -e sim_annotation 8.413268706 105 node 7 sendout packet (UnderwaterTmac) 0
++ -t 8.428630904 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.428630904 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.428630904 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.428630904 -e sim_annotation 8.428630904 106 node 9 sendout packet (UnderwaterTmac) 0
++ -t 8.452573697 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.452573697 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.452573697 -s 1 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.452573697 -e sim_annotation 8.452573697 107 node 1 sendout packet (UnderwaterTmac) 0
++ -t 8.488350703 -s 4 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 8.488350703 -s 4 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 8.488350703 -s 4 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 8.488350703 -e sim_annotation 8.488350703 108 node 4 sendout packet (UnderwaterTmac) 0
++ -t 9.096752952 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.096752952 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.096752952 -s 6 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.096752952 -e sim_annotation 9.096752952 109 node 6 sendout packet (UnderwaterTmac) 0
++ -t 9.106840061 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.106840061 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.106840061 -s 9 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.106840061 -e sim_annotation 9.106840061 110 node 9 sendout packet (UnderwaterTmac) 0
++ -t 9.270646608 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.270646608 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.270646608 -s 2 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.270646608 -e sim_annotation 9.270646608 111 node 2 sendout packet (UnderwaterTmac) 0
++ -t 9.270855661 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.270855661 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.270855661 -s 7 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.270855661 -e sim_annotation 9.270855661 112 node 7 sendout packet (UnderwaterTmac) 0
++ -t 9.546450800 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.546450800 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.546450800 -s 0 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.546450800 -e sim_annotation 9.546450800 113 node 0 sendout packet (UnderwaterTmac) 0
+n -t 9.600000 -s 5 -x 64.774218 -y 41.129068 -U -3.826517 -V -3.472211 -T 10.438190
+n -t 9.600000 -s 7 -x 80.369703 -y 43.367106 -U -2.814486 -V 0.543481 -T 23.746983
++ -t 9.863380469 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.863380469 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.863380469 -s 8 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.863380469 -e sim_annotation 9.863380469 114 node 8 sendout packet (UnderwaterTmac) 0
+n -t 9.900000 -s 9 -x 43.241888 -y 68.038201 -U 0.026460 -V -1.172360 -T 39.114661
++ -t 9.966471847 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 9.966471847 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 9.966471847 -s 5 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 9.966471847 -e sim_annotation 9.966471847 115 node 5 sendout packet (UnderwaterTmac) 0
++ -t 10.049273373 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.049273373 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.049273373 -s 4 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.049273373 -e sim_annotation 10.049273373 116 node 4 sendout packet (UnderwaterTmac) 0
++ -t 10.527919350 -s 6 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.527919350 -s 6 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.527919350 -s 6 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.527919350 -e sim_annotation 10.527919350 117 node 6 sendout packet (UnderwaterTmac) 0
++ -t 10.549582953 -s 4 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.549582953 -s 4 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.549582953 -s 4 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.549582953 -e sim_annotation 10.549582953 118 node 4 sendout packet (UnderwaterTmac) 0
++ -t 10.645052037 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.645052037 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.645052037 -s 6 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.645052037 -e sim_annotation 10.645052037 119 node 6 sendout packet (UnderwaterTmac) 0
++ -t 10.650253058 -s 1 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.650253058 -s 1 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.650253058 -s 1 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.650253058 -e sim_annotation 10.650253058 120 node 1 sendout packet (UnderwaterTmac) 0
++ -t 10.656155233 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.656155233 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.656155233 -s 3 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.656155233 -e sim_annotation 10.656155233 121 node 3 sendout packet (UnderwaterTmac) 0
++ -t 10.756363797 -s 7 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.756363797 -s 7 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.756363797 -s 7 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.756363797 -e sim_annotation 10.756363797 122 node 7 sendout packet (UnderwaterTmac) 0
++ -t 10.759862292 -s 2 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.759862292 -s 2 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.759862292 -s 2 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.759862292 -e sim_annotation 10.759862292 123 node 2 sendout packet (UnderwaterTmac) 0
++ -t 10.818873793 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.818873793 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.818873793 -s 9 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.818873793 -e sim_annotation 10.818873793 124 node 9 sendout packet (UnderwaterTmac) 0
++ -t 10.886063693 -s 7 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.886063693 -s 7 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.886063693 -s 7 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.886063693 -e sim_annotation 10.886063693 125 node 7 sendout packet (UnderwaterTmac) 0
++ -t 10.895681742 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.895681742 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.895681742 -s 1 -d -1 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.895681742 -e sim_annotation 10.895681742 126 node 1 sendout packet (UnderwaterTmac) 0
++ -t 10.938210353 -s 7 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.938210353 -s 7 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.938210353 -s 7 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.938210353 -e sim_annotation 10.938210353 127 node 7 sendout packet (UnderwaterTmac) 0
++ -t 10.953415810 -s 9 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.953415810 -s 9 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.953415810 -s 9 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.953415810 -e sim_annotation 10.953415810 128 node 9 sendout packet (UnderwaterTmac) 0
++ -t 10.956670452 -s 3 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.956670452 -s 3 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.956670452 -s 3 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.956670452 -e sim_annotation 10.956670452 129 node 3 sendout packet (UnderwaterTmac) 0
++ -t 10.989080632 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 10.989080632 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 10.989080632 -s 9 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 10.989080632 -e sim_annotation 10.989080632 130 node 9 sendout packet (UnderwaterTmac) 0
++ -t 11.098358369 -s 3 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.098358369 -s 3 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.098358369 -s 3 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.098358369 -e sim_annotation 11.098358369 131 node 3 sendout packet (UnderwaterTmac) 0
++ -t 11.098521208 -s 8 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.098521208 -s 8 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.098521208 -s 8 -d 0 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.098521208 -e sim_annotation 11.098521208 132 node 8 sendout packet (UnderwaterTmac) 0
++ -t 11.109934825 -s 4 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.109934825 -s 4 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.109934825 -s 4 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.109934825 -e sim_annotation 11.109934825 133 node 4 sendout packet (UnderwaterTmac) 0
++ -t 11.264003657 -s 8 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.264003657 -s 8 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.264003657 -s 8 -d 5 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.264003657 -e sim_annotation 11.264003657 134 node 8 sendout packet (UnderwaterTmac) 0
++ -t 11.276694929 -s 6 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.276694929 -s 6 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.276694929 -s 6 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.276694929 -e sim_annotation 11.276694929 135 node 6 sendout packet (UnderwaterTmac) 0
++ -t 11.331244146 -s 0 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.331244146 -s 0 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.331244146 -s 0 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.331244146 -e sim_annotation 11.331244146 136 node 0 sendout packet (UnderwaterTmac) 0
++ -t 11.338714259 -s 5 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.338714259 -s 5 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.338714259 -s 5 -d 8 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.338714259 -e sim_annotation 11.338714259 137 node 5 sendout packet (UnderwaterTmac) 0
++ -t 11.376602599 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.376602599 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.376602599 -s 5 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.376602599 -e sim_annotation 11.376602599 138 node 5 sendout packet (UnderwaterTmac) 0
+n -t 11.400000 -s 4 -x 48.864184 -y 22.242023 -U 0.546264 -V 4.975154 -T 12.338008
++ -t 11.427803788 -s 0 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.427803788 -s 0 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.427803788 -s 0 -d 4 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.427803788 -e sim_annotation 11.427803788 139 node 0 sendout packet (UnderwaterTmac) 0
++ -t 11.495686918 -s 6 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC 
+- -t 11.495686918 -s 6 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC
+h -t 11.495686918 -s 6 -d 9 -p UnderwaterTmac -e 40 -c 2 -a 0 -i 0 -k MAC -R 100.000000
+v -t 11.495686918 -e sim_annotation 11.495686918 140 node 6 sendout packet (UnderwaterTmac) 0
+n -t 16.200000 -s 6 -x 91.967361 -y 25.595537 -U -2.769541 -V 2.534634 -T 6.985444
+n -t 16.200000 -s 8 -x 39.795488 -y 94.464452 -U 1.987807 -V -4.680180 -T 19.083348
+n -t 20.100000 -s 5 -x 24.832304 -y 4.885472 -U -0.513481 -V 1.144624 -T 26.308919
+n -t 21.000000 -s 3 -x 76.030557 -y 83.210709 -U -1.185939 -V -1.189619 -T 27.963248
+n -t 23.400000 -s 6 -x 72.620890 -y 43.301081 -U -0.688210 -V 1.201007 -T 4.804641
+n -t 24.000000 -s 4 -x 55.603998 -y 83.625505 -U -0.840194 -V -5.345094 -T 13.281941
+n -t 24.600000 -s 1 -x 32.410509 -y 64.077173 -U -3.946012 -V 4.395930 -T 4.118183
+W -t 15.0
