@@ -135,6 +135,7 @@ private:
 	NeighbEnt **tab;    // neighbor table
 };
 
+//==========================================================================================
 #define	DBRH_DATA_GREEDY	0
 #define	DBRH_DATA_RECOVER	1
 #define	DBRH_BEACON		2
@@ -180,6 +181,7 @@ private:
 	double depth_;		// the depth of last hop
 };
 
+//================================================================================
 class DBR_Agent : public Tap, public Agent {
 	friend class DBR_BeaconHandler;
 	friend class DBR_BeaconTimer;
