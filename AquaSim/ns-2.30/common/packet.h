@@ -545,6 +545,7 @@ struct hdr_cmn {
 	int error_;		// error flag
 	int errbitcnt_;     // # of corrupted bits jahn
 	int fecsize_;
+	double epaValue_;
 	double ts_;		// timestamp: for q-delay measurement
 	int iface_;		// receiving interface (label)
 	dir_t direction_;	// direction: 0=none, 1=up, -1=down
@@ -614,6 +615,9 @@ struct hdr_cmn {
 	}
 	inline int& fecsize() {
 		return fecsize_;
+	}
+	inline double& epaValue() {
+		return (epaValue_);
 	}
 	inline double& timestamp() {
 		return (ts_);
