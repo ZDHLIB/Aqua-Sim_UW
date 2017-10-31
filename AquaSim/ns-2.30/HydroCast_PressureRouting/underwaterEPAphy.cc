@@ -287,6 +287,7 @@ UnderwaterPhy::sendUp(Packet *p)
 		}
 
 		if(propagation_) {
+			printf("underwaterphy: propagation_\n");
 			s.stamp((MobileNode*)node(), ant_, 0, lambda_);
 			Pr = propagation_->Pr(&p->txinfo_, &s, this);
 			if (Pr < CSThresh_) {
@@ -326,7 +327,8 @@ UnderwaterPhy::sendUp(Packet *p)
 			}
 		}
 
-		if( epaSuccessProb( hdr->size(), d, freq_) == 0 )
+		double epaValue = epaSuccessProb( hdr->size(), d, freq_);
+		if( epaValue == 0 )
 		{
 			printf("underwaterphy: epa transmit failed\n");
 			return pkt_recvd;
@@ -392,7 +394,7 @@ int UnderwaterPhy::epaSuccessProb(int pktsize, double d, double f)
 {
 	double successCorrect = pow( (1 - epaErrorProb(d, f) ), pktsize );
 	if (Random::uniform() < successCorrect)
-		return 1;
+		return successCorrect;
 	else
 		return 0;
 }
