@@ -333,6 +333,10 @@ UnderwaterPhy::sendUp(Packet *p)
 			printf("underwaterphy: epa transmit failed\n");
 			return pkt_recvd;
 		}
+		else
+		{
+			hdr->epaValue() = epaValue;
+		}
 
 //		if (Pr < RXThresh_) {
 //
