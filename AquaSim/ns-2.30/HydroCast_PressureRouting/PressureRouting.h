@@ -238,6 +238,7 @@ protected:
 	Packet* makeBeacon(void);
 	void sendBeacon(void);
 	void beaconIn(Packet *);
+	double calDistance(double nx, double ny, double nz, double x, double y, double z)
 
 	void handlePktForward(Packet *p);
 

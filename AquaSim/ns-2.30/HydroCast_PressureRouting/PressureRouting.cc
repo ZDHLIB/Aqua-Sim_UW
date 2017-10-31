@@ -5,7 +5,6 @@ extern "C" {
 #include <stdio.h>
 }
 
-
 #define	BEACON_RESCHED				\
 	beacon_timer_->resched(bint_ + 		\
 			Random::uniform(2*bdesync_*bint_) - \
@@ -33,58 +32,55 @@ int hdr_dbr::offset_;
  * The communication class with TclObject
  */
 
-static class DBRAgentClass : public TclClass {
+static class DBRAgentClass: public TclClass {
 public:
-	DBRAgentClass() : TclClass("Agent/DBR") {}
-	TclObject* create(int, const char* const*) {
+	DBRAgentClass() :
+			TclClass("Agent/DBR") {
+	}
+	TclObject* create(int, const char* const *) {
 		return (new DBR_Agent);
 	}
 } class_DBRAgent;
 
-class DBRHeaderClass : public PacketHeaderClass {
+class DBRHeaderClass: public PacketHeaderClass {
 public:
-	DBRHeaderClass() : PacketHeaderClass("PacketHeader/DBR", sizeof(hdr_dbr)) {
+	DBRHeaderClass() :
+			PacketHeaderClass("PacketHeader/DBR", sizeof(hdr_dbr)) {
 		bind_offset(&hdr_dbr::offset_);
 	}
 } class_dbrhdr;
 
-void DBR_BeaconHandler::handle(Event *e)
-{
-	a_->forwardPacket((Packet*)e, 0);
+void DBR_BeaconHandler::handle(Event *e) {
+	a_->forwardPacket((Packet*) e, 0);
 }
 
-void DBR_BeaconTimer::expire(Event *e)
-{
+void DBR_BeaconTimer::expire(Event *e) {
 	a_->beacon_callback();
 }
 
-void DBR_SendingTimer::expire(Event *e)
-{
+void DBR_SendingTimer::expire(Event *e) {
 	a_->send_callback();
 }
 
 /*
-void DBR_DeadNeighbTimer::expire(Event *e)
-{
-	a->deadneighb_callback(ne);
-}
-*/
+ void DBR_DeadNeighbTimer::expire(Event *e)
+ {
+ a->deadneighb_callback(ne);
+ }
+ */
 
 // Insert the item into queue.
 // The queue is sorted by the expected sending time
 // of the packet.
-void MyPacketQueue::insert(QueueItem *q)
-{
+void MyPacketQueue::insert(QueueItem *q) {
 	QueueItem *tmp;
 	deque<QueueItem*>::iterator iter;
 
 	// find the insert point
 	iter = dq_.begin();
-	while (iter != dq_.end())
-	{
+	while (iter != dq_.end()) {
 		tmp = *iter;
-		if (tmp->send_time_ > q->send_time_)
-		{
+		if (tmp->send_time_ > q->send_time_) {
 			dq_.insert(iter, q);
 			return;
 		}
@@ -99,9 +95,7 @@ void MyPacketQueue::insert(QueueItem *q)
 // If packet is not found, or previous sending time
 // is larger than current one, return TRUE.
 // Otherwise return FALSE.
-bool
-MyPacketQueue::update(Packet *p, double t)
-{
+bool MyPacketQueue::update(Packet *p, double t) {
 	Packet *pkt;
 	int curID;
 	deque<QueueItem*>::iterator iter;
@@ -113,17 +107,13 @@ MyPacketQueue::update(Packet *p, double t)
 
 	// search the queue
 	iter = dq_.begin();
-	while (iter != dq_.end())
-	{
+	while (iter != dq_.end()) {
 		dbrh = hdr_dbr::access((*iter)->p_);
-		if (dbrh->packetID() == curID)
-		{ // entry found
-			if ((*iter)->send_time_ > t)
-			{
+		if (dbrh->packetID() == curID) { // entry found
+			if ((*iter)->send_time_ > t) {
 				dq_.erase(iter);
 				return TRUE;
-			}
-			else
+			} else
 				return FALSE;
 		}
 	}
@@ -136,9 +126,7 @@ MyPacketQueue::update(Packet *p, double t)
 // as p, and remove it.
 // If such a item is found, return true, otherwise
 // return false.
-bool
-MyPacketQueue::purge(Packet *p)
-{
+bool MyPacketQueue::purge(Packet *p) {
 	Packet *pkt;
 	int curID;
 	deque<QueueItem*>::iterator iter;
@@ -150,11 +138,9 @@ MyPacketQueue::purge(Packet *p)
 
 	// search the queue
 	iter = dq_.begin();
-	while (iter != dq_.end())
-	{
+	while (iter != dq_.end()) {
 		dbrh = hdr_dbr::access((*iter)->p_);
-		if (dbrh->packetID() == curID)
-		{
+		if (dbrh->packetID() == curID) {
 			dq_.erase(iter);
 			return TRUE;
 		}
@@ -165,80 +151,73 @@ MyPacketQueue::purge(Packet *p)
 }
 
 // Dump all the items in queue for debug
-void MyPacketQueue::dump()
-{
+void MyPacketQueue::dump() {
 	deque<QueueItem*>::iterator iter;
 	hdr_dbr *dbrh;
 	int i = 0;
 
 	iter = dq_.begin();
-	while (iter != dq_.end())
-	{
+	while (iter != dq_.end()) {
 		dbrh = hdr_dbr::access((*iter)->p_);
-		fprintf(stderr, "Queue[%d]: packetID %d, send time %f\n",
-				i, dbrh->packetID(), (*iter)->send_time_);
+		fprintf(stderr, "Queue[%d]: packetID %d, send time %f\n", i,
+				dbrh->packetID(), (*iter)->send_time_);
 		iter++;
 		i++;
 	}
 }
 
-NeighbTable::NeighbTable(DBR_Agent *a)
-{
-    int i;
+NeighbTable::NeighbTable(DBR_Agent *a) {
+	int i;
 
-    num_ents = 0;
-    max_ents = 100;
+	num_ents = 0;
+	max_ents = 100;
 
-    // create the default table with size 100
-    tab = new NeighbEnt* [100];
-    a_ = a;
+	// create the default table with size 100
+	tab = new NeighbEnt*[100];
+	a_ = a;
 
-    for (i = 0; i < 100; i++)
-        tab[i] = new NeighbEnt(a);
+	for (i = 0; i < 100; i++)
+		tab[i] = new NeighbEnt(a);
 }
 
-NeighbTable::~NeighbTable()
-{
-    int i;
+NeighbTable::~NeighbTable() {
+	int i;
 
-    for (i = 0; i < max_ents; i++)
-        delete tab[i];
+	for (i = 0; i < max_ents; i++)
+		delete tab[i];
 
-    delete[] tab;
+	delete[] tab;
 }
 
-static int neighbEntCmp(const void *a, const void *b)
-{
-	nsaddr_t ia = ((const NeighbEnt*)a)->net_id;
-	nsaddr_t ib = ((const NeighbEnt*)b)->net_id;
+static int neighbEntCmp(const void *a, const void *b) {
+	nsaddr_t ia = ((const NeighbEnt*) a)->net_id;
+	nsaddr_t ib = ((const NeighbEnt*) b)->net_id;
 
-	if (ia > ib) return 1;
-	if (ia < ib) return -1;
+	if (ia > ib)
+		return 1;
+	if (ia < ib)
+		return -1;
 	return 0;
 }
 
-void NeighbTable::dump(void)
-{
+void NeighbTable::dump(void) {
 	int i;
 
 	for (i = 0; i < num_ents; i++)
-		fprintf(stderr, "tab[%d]: %d x = %f, y = %f, z = %f\n",
-				i, tab[i]->net_id,
-				tab[i]->x, tab[i]->y, tab[i]->z);
+		fprintf(stderr, "tab[%d]: %d x = %f, y = %f, z = %f\n", i,
+				tab[i]->net_id, tab[i]->x, tab[i]->y, tab[i]->z);
 }
 
-void
-NeighbTable::ent_delete(const NeighbEnt *ne)
-{
+void NeighbTable::ent_delete(const NeighbEnt *ne) {
 	int l, r, m;
 	int i;
 	NeighbEnt *owslot;
 
 	// binary search
-	l = 0; r = num_ents - 1;
-	while (l <= r)
-	{
-		m = l + (r - l)/2;
+	l = 0;
+	r = num_ents - 1;
+	while (l <= r) {
+		m = l + (r - l) / 2;
 		if (tab[m]->net_id < ne->net_id)
 			l = m + 1;
 		else if (tab[m]->net_id > ne->net_id)
@@ -259,7 +238,7 @@ NeighbTable::ent_delete(const NeighbEnt *ne)
 	while (i < num_ents)
 		tab[i - 1] = tab[i++];
 
-	tab[num_ents-1] = owslot;
+	tab[num_ents - 1] = owslot;
 	num_ents--;
 }
 
@@ -288,9 +267,9 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 	{
 		m = l + (r - l)/2;
 		if (tab[m]->net_id < ne->net_id)
-			l = m + 1;
+		l = m + 1;
 		else if (tab[m]->net_id > ne->net_id)
-			r = m - 1;
+		r = m - 1;
 		else
 		{
 			// the entry is existing
@@ -309,7 +288,7 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 	// slide the entries after l
 	i = num_ents - 1;
 	while (i >= l)
-		tab[i+1] = tab[i--];
+	tab[i+1] = tab[i--];
 
 	tab[l] = owslot;
 	tab[l]->net_id = ne->net_id;
@@ -322,8 +301,7 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 }
 #else
 NeighbEnt*
-NeighbTable::ent_add(const NeighbEnt *ne)
-{
+NeighbTable::ent_add(const NeighbEnt *ne) {
 	NeighbEnt **pte;
 	NeighbEnt *pe;
 	int i, j;
@@ -331,8 +309,7 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 
 	// find if the neighbor is already existing
 	for (i = 0; i < num_ents; i++)
-		if (tab[i]->net_id == ne->net_id)
-		{
+		if (tab[i]->net_id == ne->net_id) {
 			tab[i]->x = ne->x;
 			tab[i]->y = ne->y;
 			tab[i]->z = ne->z;
@@ -341,25 +318,24 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 		}
 
 	/*
-	if (pte = (NeighbEnt**)bsearch(ne, tab, num_ents,
-				sizeof(NeighbEnt *), neighbEntCmp))
-	{
-		(*pte)->net_id = ne->net_id;	// it doesn't hurt to rewrite it!
-		(*pte)->x = ne->x;
-		(*pte)->y = ne->y;
-		(*pte)->z = ne->z;
+	 if (pte = (NeighbEnt**)bsearch(ne, tab, num_ents,
+	 sizeof(NeighbEnt *), neighbEntCmp))
+	 {
+	 (*pte)->net_id = ne->net_id;	// it doesn't hurt to rewrite it!
+	 (*pte)->x = ne->x;
+	 (*pte)->y = ne->y;
+	 (*pte)->z = ne->z;
 
-		return (*pte);
-	}
-	*/
+	 return (*pte);
+	 }
+	 */
 
 	// need we increase the size of table
-	if (num_ents == max_ents)
-	{
+	if (num_ents == max_ents) {
 		NeighbEnt **tmp = tab;
 		max_ents *= 2;			// double the space
-		tab = new NeighbEnt* [max_ents];
-		bcopy(tmp, tab, num_ents*sizeof(NeighbEnt *));
+		tab = new NeighbEnt*[max_ents];
+		bcopy(tmp, tab, num_ents * sizeof(NeighbEnt *));
 
 		for (i = num_ents; i < max_ents; i++)
 			tab[i] = new NeighbEnt(a_);
@@ -370,13 +346,11 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 	// get the insert point
 	if (num_ents == 0)
 		i = 0;
-	else
-	{
+	else {
 		l = 0;
 		r = num_ents - 1;
 
-		while (r > l)
-		{
+		while (r > l) {
 			m = l + (r - l) / 2;
 			if (ne->net_id < tab[m]->net_id)
 				r = m - 1;
@@ -386,11 +360,10 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 
 		if (r < l)
 			i = r + 1;
+		else if (ne->net_id < tab[r]->net_id)
+			i = r;
 		else
-			if (ne->net_id < tab[r]->net_id)
-				i = r;
-			else
-				i = r + 1;
+			i = r + 1;
 	}
 
 	// assign an unused slot to i
@@ -399,9 +372,8 @@ NeighbTable::ent_add(const NeighbEnt *ne)
 
 	// adjust the entries after insert point i
 	j = num_ents - 1;
-	while (j >= i)
-	{
-		tab[j+1] = tab[j];
+	while (j >= i) {
+		tab[j + 1] = tab[j];
 		j--;
 	}
 
@@ -421,14 +393,11 @@ NeighbTable::ent_add(const NeighbEnt *ne)
  * update the neighbor entry's routeFlag field with va
  */
 
-void NeighbTable::updateRouteFlag(nsaddr_t addr, int val)
-{
+void NeighbTable::updateRouteFlag(nsaddr_t addr, int val) {
 	int i;
 
-	for (i = 0; i < num_ents; i++)
-	{
-		if (tab[i]->net_id == addr)
-		{
+	for (i = 0; i < num_ents; i++) {
+		if (tab[i]->net_id == addr) {
 			tab[i]->routeFlag = val;
 			return;
 		}
@@ -436,6 +405,38 @@ void NeighbTable::updateRouteFlag(nsaddr_t addr, int val)
 }
 
 #ifdef	DBR_USE_ROUTEFLAG
+NeighbEnt *
+NeighbTable::ent_find_shadowest(MobileNode *mn) {
+	NeighbEnt *ne = 0;
+	int i;
+	double x, y, z, t;
+
+	mn->getLoc(&x, &y, &z);
+	t = z;
+
+#ifdef DEBUG_AGENT
+	fprintf(stderr, "[%d]: %d neighbors.\n", mn->address(), num_ents);
+#endif
+
+	for (i = 0; i < num_ents; i++) {
+#ifdef	DEBUG_PRINT
+		fprintf(stderr, "%d[%d] x: %f, y: %f, z: %f\n", mn->address(),
+				tab[i]->net_id, tab[i]->x, tab[i]->y, tab[i]->z);
+#endif
+
+		if (tab[i]->routeFlag == 1) {
+			ne = tab[i];
+			return ne;
+		}
+
+		if (tab[i]->z > t) {
+			t = tab[i]->z;
+			ne = tab[i];
+		}
+	}
+	return ne;
+}
+#else
 NeighbEnt *
 NeighbTable::ent_find_shadowest(MobileNode *mn)
 {
@@ -446,73 +447,34 @@ NeighbTable::ent_find_shadowest(MobileNode *mn)
 	mn->getLoc(&x, &y, &z);
 	t = z;
 
-	#ifdef DEBUG_AGENT
-	fprintf(stderr, "[%d]: %d neighbors.\n", mn->address(), num_ents);
-	#endif
-
 	for (i = 0; i < num_ents; i++)
 	{
-		#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 		fprintf(stderr, "%d[%d] x: %f, y: %f, z: %f\n",
-			mn->address(), tab[i]->net_id, tab[i]->x, tab[i]->y, tab[i]->z);
-		#endif
-
-
-		if (tab[i]->routeFlag == 1)
-		{
-			ne = tab[i];
-			return ne;
-		}
+				mn->address(), tab[i]->net_id, tab[i]->x, tab[i]->y, tab[i]->z);
+#endif
 
 		if (tab[i]->z > t)
 		{
-		    t = tab[i]->z;
-		    ne = tab[i];
+			t = tab[i]->z;
+			ne = tab[i];
 		}
 	}
+
 	return ne;
-}
-#else
-NeighbEnt *
-NeighbTable::ent_find_shadowest(MobileNode *mn)
-{
-    NeighbEnt *ne = 0;
-    int i;
-    double x, y, z, t;
-
-    mn->getLoc(&x, &y, &z);
-    t = z;
-
-    for (i = 0; i < num_ents; i++)
-    {
-	#ifdef	DEBUG_PRINT
-	fprintf(stderr, "%d[%d] x: %f, y: %f, z: %f\n",
-		mn->address(), tab[i]->net_id, tab[i]->x, tab[i]->y, tab[i]->z);
-	#endif
-
-        if (tab[i]->z > t)
-        {
-            t = tab[i]->z;
-            ne = tab[i];
-        }
-    }
-
-    return ne;
 }
 #endif	// DBR_USE_ROUTEFLAG
 
-
-DBR_Agent::DBR_Agent() : Agent(PT_DBR),
-	bint_(DBR_BEACON_INT), bdesync_(DBR_BEACON_DESYNC), mn_(0), pkt_cnt_(0)
-{
+DBR_Agent::DBR_Agent() :
+		Agent(PT_DBR), bint_(DBR_BEACON_INT), bdesync_(DBR_BEACON_DESYNC), mn_(
+				0), pkt_cnt_(0) {
 	ntab_ = new NeighbTable(this);
 
 	// create packet cache
 	pc_ = new PktCache();
 }
 
-DBR_Agent::~DBR_Agent()
-{
+DBR_Agent::~DBR_Agent() {
 	delete ntab_;
 
 	// packet cache
@@ -521,8 +483,7 @@ DBR_Agent::~DBR_Agent()
 
 // construct the beacon packet
 Packet*
-DBR_Agent::makeBeacon(void)
-{
+DBR_Agent::makeBeacon(void) {
 	Packet *p = allocpkt();
 	assert(p != NULL);
 
@@ -551,20 +512,16 @@ DBR_Agent::makeBeacon(void)
 }
 
 // send beacon pkt only once at the beginning
-void DBR_Agent::sendBeacon(void)
-{
+void DBR_Agent::sendBeacon(void) {
 	Packet *p = makeBeacon();
 	hdr_cmn *cmh = hdr_cmn::access(p);
 
-	if (p)
-	{
+	if (p) {
 		assert(!HDR_CMN(p)->xmit_failure_);
 		if (cmh->direction() == hdr_cmn::UP)
 			cmh->direction() = hdr_cmn::DOWN;
 		Scheduler::instance().schedule(ll, p, 0);
-	}
-	else
-	{
+	} else {
 		fprintf(stderr, "ERROR: Can't make new beacon!\n");
 		abort();
 	}
@@ -572,8 +529,7 @@ void DBR_Agent::sendBeacon(void)
 
 // fetch the packet from the sending queue
 // and broadcast.
-void DBR_Agent::send_callback(void)
-{
+void DBR_Agent::send_callback(void) {
 	QueueItem *q;
 	hdr_dbr *dbrh;
 
@@ -592,16 +548,14 @@ void DBR_Agent::send_callback(void)
 
 	// reschedule the timer if there are
 	// other packets in the queue
-	if (!pq_.empty())
-	{
+	if (!pq_.empty()) {
 		q = pq_.front();
 		latest_ = q->send_time_;
 		send_timer_->resched(latest_ - NOW);
 	}
 }
 
-void DBR_Agent::beacon_callback(void)
-{
+void DBR_Agent::beacon_callback(void) {
 	return;
 
 	Packet *p = makeBeacon();
@@ -609,8 +563,7 @@ void DBR_Agent::beacon_callback(void)
 	hdr_cmn *cmh = hdr_cmn::access(p);
 	hdr_ip *iph = hdr_ip::access(p);
 
-	if (p)
-	{
+	if (p) {
 		assert(!HDR_CMN(p)->xmit_failure_);
 		if (cmh->direction() == hdr_cmn::UP)
 			cmh->direction() = hdr_cmn::DOWN;
@@ -618,10 +571,8 @@ void DBR_Agent::beacon_callback(void)
 		//fprintf(stderr, "%d is broadcasting beacon pkt src: %d, dst: %d\n",
 		//		mn_->address(), iph->saddr(), iph->daddr());
 
-		Scheduler::instance().schedule(ll, p, Random::uniform()*JITTER);
-	}
-	else
-	{
+		Scheduler::instance().schedule(ll, p, Random::uniform() * JITTER);
+	} else {
 		fprintf(stderr, "ERROR: Can't make new beacon!\n");
 		exit(-1);
 	}
@@ -629,13 +580,11 @@ void DBR_Agent::beacon_callback(void)
 	//BEACON_RESCHED
 }
 
-void DBR_Agent::deadneighb_callback(NeighbEnt *ne)
-{
+void DBR_Agent::deadneighb_callback(NeighbEnt *ne) {
 	ntab_->ent_delete(ne);
 }
 
-void DBR_Agent::forwardPacket(Packet *p, int flag)
-{
+void DBR_Agent::forwardPacket(Packet *p, int flag) {
 	hdr_ip *iph = hdr_ip::access(p);
 	hdr_cmn *cmh = hdr_cmn::access(p);
 	hdr_dbr *dbrh = hdr_dbr::access(p);
@@ -643,10 +592,10 @@ void DBR_Agent::forwardPacket(Packet *p, int flag)
 
 	double delay = 0.0;
 
-	#ifdef	DEBUG_AGENT
-	fprintf(stderr, "node %d is forwarding to %d\n",
-				mn_->address(), Address::instance().get_nodeaddr(iph->daddr()));
-	#endif
+#ifdef	DEBUG_AGENT
+	fprintf(stderr, "node %d is forwarding to %d\n", mn_->address(),
+			Address::instance().get_nodeaddr(iph->daddr()));
+#endif
 
 	// common settings for forwarding
 	cmh->direction() = hdr_cmn::DOWN;
@@ -655,63 +604,57 @@ void DBR_Agent::forwardPacket(Packet *p, int flag)
 	cmh->size() = dbrh->size() + IP_HDR_LEN;
 
 	// make decision on next hop based on packet mode
-	switch (dbrh->mode())
-	{
+	switch (dbrh->mode()) {
 	case DBRH_DATA_GREEDY:
 		ne = ntab_->ent_find_shadowest(mn_);
-		if (ne)
-		{
+		if (ne) {
 			cmh->next_hop() = ne->net_id;
-			#ifdef	DEBUG_AGENT
+#ifdef	DEBUG_AGENT
 			fprintf(stderr, "[%d] -> %d\n", mn_->address(), ne->net_id);
-			#endif
-		}
-		else
-		{
-			#ifdef	DEBUG_PRINT
-			fprintf(stderr, "[%d]: put pkt into recovery mode!\n", mn_->address());
-			#endif
+#endif
+		} else {
+#ifdef	DEBUG_PRINT
+			fprintf(stderr, "[%d]: put pkt into recovery mode!\n",
+					mn_->address());
+#endif
 
 			// put packet into recovery mode
 			cmh->next_hop() = IP_BROADCAST;
 			dbrh->mode() = DBRH_DATA_RECOVER;
 			dbrh->prev_hop() = mn_->address();
 			dbrh->owner() = mn_->address();
-			dbrh->nhops() = DBR_MAX_HOPS;		// set the range of broadcasting by hops
+			dbrh->nhops() = DBR_MAX_HOPS;// set the range of broadcasting by hops
 		}
 		break;
 	case DBRH_DATA_RECOVER:
-		#ifdef	DEBUG_PRINT
-		fprintf(stderr, "[%d]: forward in recovery alogrithm!\n", mn_->address());
-		#endif
+#ifdef	DEBUG_PRINT
+		fprintf(stderr, "[%d]: forward in recovery alogrithm!\n",
+				mn_->address());
+#endif
 
-		if (pc_->accessPacket(dbrh->packetID()))
-		{
+		if (pc_->accessPacket(dbrh->packetID())) {
 			// each node only broadcasts once
-			#ifdef DEBUG_PRINT
-			fprintf(stderr, "[%d]: packet is already in cache!\n", mn_->address());
-			#endif
+#ifdef DEBUG_PRINT
+			fprintf(stderr, "[%d]: packet is already in cache!\n",
+					mn_->address());
+#endif
 
 			return;
-		}
-		else
+		} else {
 			pc_->addPacket(dbrh->packetID());
+		}
 
 		// can we find other greedy node?
 		ne = ntab_->ent_find_shadowest(mn_);
-		if (ne == NULL)
-		{
-			if (dbrh->nhops() <= 0)
-			{
-				#ifdef	DEBUG_BROADCASTING
+		if (ne == NULL) {
+			if (dbrh->nhops() <= 0) {
+#ifdef	DEBUG_BROADCASTING
 				fprintf(stderr, "[%d] drops pkt! (nhops < 0)\n", mn_->address());
-				#endif
+#endif
 
 				drop(p, DROP_RTR_TTL);
 				return;
-			}
-			else
-			{
+			} else {
 				// broadcasting
 				cmh->next_hop() = IP_BROADCAST;
 				dbrh->mode() = DBRH_DATA_RECOVER;
@@ -722,37 +665,31 @@ void DBR_Agent::forwardPacket(Packet *p, int flag)
 				// set broadcasting delay
 				delay = Random::uniform() * JITTER;
 			}
-		}
-		else if (ne->net_id != dbrh->prev_hop())
-		{
+		} else if (ne->net_id != dbrh->prev_hop()) {
 			// new route is found, put pkt back to greedy alg
 			cmh->next_hop() = ne->net_id;
 			dbrh->mode() = DBRH_DATA_GREEDY;
-			#ifdef	DEBUG_AGENT
-			fprintf(stderr, "back to greedy: [%d] -> %d\n", mn_->address(), ne->net_id);
-			#endif
-		}
-		else
-		{
-			#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_AGENT
+			fprintf(stderr, "back to greedy: [%d] -> %d\n", mn_->address(),
+					ne->net_id);
+#endif
+		} else {
+#ifdef	DEBUG_PRINT
 			fprintf(stderr, "[%d]:dbrh->nhops = %d\n", mn_->address(),
 					dbrh->nhops());
-			#endif
+#endif
 
-			if (dbrh->nhops() <= 0)
-			{
-				#ifdef	DEBUG_BROADCASTING
+			if (dbrh->nhops() <= 0) {
+#ifdef	DEBUG_BROADCASTING
 				fprintf(stderr, "[%d] drops pkt! (nhops < 0)\n", mn_->address());
-				#endif
+#endif
 
 				drop(p, DROP_RTR_TTL);
 				return;
-			}
-			else
-			{
-				#ifdef	DEBUG_BROADCASTING
+			} else {
+#ifdef	DEBUG_BROADCASTING
 				fprintf(stderr, "[%d] is broadcasting!\n", mn_->address());
-				#endif
+#endif
 
 				// broadcasting
 				cmh->next_hop() = IP_BROADCAST;
@@ -778,10 +715,11 @@ void DBR_Agent::forwardPacket(Packet *p, int flag)
 }
 
 // get the info from beacon pkt
-void DBR_Agent::beaconIn(Packet *p)
-{
+void DBR_Agent::beaconIn(Packet *p) {
 	hdr_ip *iph = hdr_ip::access(p);
 	hdr_dbr *dbrh = hdr_dbr::access(p);
+
+	double x, y, z;
 
 	nsaddr_t src = Address::instance().get_nodeaddr(iph->saddr());
 
@@ -789,10 +727,12 @@ void DBR_Agent::beaconIn(Packet *p)
 	NeighbEnt *ne;
 	ne = new NeighbEnt(this);
 
-	#ifdef DEBUG_BEACON
+#ifdef DEBUG_BEACON
 	fprintf(stderr, "%d got beacon from %d\n",
-				mn_->address(), src);
-	#endif
+			mn_->address(), src);
+#endif
+
+	mn_->getLoc(&x, &y, &z);
 
 	ne->x = dbrh->x;
 	ne->y = dbrh->y;
@@ -807,9 +747,16 @@ void DBR_Agent::beaconIn(Packet *p)
 	Packet::free(p);
 }
 
-#if 1
-void DBR_Agent::recv(Packet *p, Handler *)
+double DBR_Agent::calDistance(double nx, double ny, double nz, double x, double y, double z)
 {
+	double dX = nx - x;
+	double dY = ny - y;
+	double dZ = nz - z;
+	return sqrt(dX * dX + dY * dY + dZ * dZ);
+}
+
+#if 1
+void DBR_Agent::recv(Packet *p, Handler *) {
 	hdr_ip *iph = hdr_ip::access(p);
 	hdr_cmn *cmh = hdr_cmn::access(p);
 	hdr_dbr *dbrh = hdr_dbr::access(p);
@@ -819,22 +766,20 @@ void DBR_Agent::recv(Packet *p, Handler *)
 	nsaddr_t src = Address::instance().get_nodeaddr(iph->saddr());
 	nsaddr_t dst = Address::instance().get_nodeaddr(iph->daddr());
 
-	if (mn_ == NULL)
-	{
+	if (mn_ == NULL) {
 		fprintf(stderr, "ERROR: Pointer to node is null!\n");
 		abort();
 	}
 
 	mn_->getLoc(&x, &y, &z);
 
-	if (dbrh->mode() == DBRH_BEACON)
-	{// although we eliminate the beacon pkt
-	 // but we still reserve the handler for
-	 // furture control logic
+	if (dbrh->mode() == DBRH_BEACON) {	// although we eliminate the beacon pkt
+										// but we still reserve the handler for
+										// furture control logic
 
-		#ifdef DEBUG_PRINT
+#ifdef DEBUG_PRINT
 		fprintf(stderr, "[%d]: beacon pkt is received.\n", mn_->address());
-		#endif
+#endif
 
 		// self is not one of the neighbors
 		if (src != mn_->address())
@@ -842,9 +787,7 @@ void DBR_Agent::recv(Packet *p, Handler *)
 		return;
 	}
 
-	if ((src == mn_->address()) &&
-	    (cmh->num_forwards() == 0))
-	{// packet I'm originating
+	if ((src == mn_->address()) && (cmh->num_forwards() == 0)) {// packet I'm originating
 
 		cmh->direction() = hdr_cmn::DOWN;
 		cmh->addr_type_ = AF_INET;
@@ -866,26 +809,23 @@ void DBR_Agent::recv(Packet *p, Handler *)
 		return;
 	}
 
-	if ((src == mn_->address()) &&
-	    (dbrh->mode() == DBRH_DATA_GREEDY))
-	{// Wow, it seems some one is broadcasting the pkt for us,
-	 // so we need to dismiss the timer for the pkt
+	if ((src == mn_->address()) && (dbrh->mode() == DBRH_DATA_GREEDY)) {// Wow, it seems some one is broadcasting the pkt for us,
+																		// so we need to dismiss the timer for the pkt
 
-		#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 		fprintf(stderr, "[%d] got the pkt I've sent\n", mn_->address());
-		#endif
+#endif
 
 		drop(p, DROP_RTR_ROUTE_LOOP);
 		return;
 	}
 
-	if (dst == mn_->address())
-	{// packet is for me
+	if (dst == mn_->address()) {	 // packet is for me
 
-		#ifdef DEBUG_PRINT
+#ifdef DEBUG_PRINT
 		fprintf(stderr, "[%d] packet is delivered!\n", mn_->address());
 		fflush(stderr);
-		#endif
+#endif
 
 		// we may need to send it to upper layer agent
 		send_to_dmux(p, 0);
@@ -918,7 +858,7 @@ void DBR_Agent::handlePktForward(Packet *p)
 		return;
 	}
 	else
-		pc_->addPacket(dbrh->packetID());
+	pc_->addPacket(dbrh->packetID());
 
 	// common settings for forwarding
 	cmh->num_forwards()++;
@@ -937,8 +877,7 @@ void DBR_Agent::handlePktForward(Packet *p)
 // There are two modes right now: GREEDY and RECOVERY
 // The node will broadcast all RECOVERY pakets, but
 // it will drop the GREEDY pakets from upper level.
-void DBR_Agent::handlePktForward(Packet *p)
-{
+void DBR_Agent::handlePktForward(Packet *p) {
 	hdr_ip *iph = hdr_ip::access(p);
 	hdr_cmn *cmh = hdr_cmn::access(p);
 	hdr_dbr *dbrh = hdr_dbr::access(p);
@@ -948,18 +887,17 @@ void DBR_Agent::handlePktForward(Packet *p)
 
 	double x, y, z;
 
-	if (--iph->ttl_ == 0)
-	{
+	if (--iph->ttl_ == 0) {
 		drop(p, DROP_RTR_TTL);
 		return;
 	}
 
 	/*
-	// dump the queue
-	fprintf(stderr, "-------- Node id: %d --------\n", mn_->address());
-	fprintf(stderr, " curID: %d\n", dbrh->packetID());
-	pq_.dump();
-	*/
+	 // dump the queue
+	 fprintf(stderr, "-------- Node id: %d --------\n", mn_->address());
+	 fprintf(stderr, " curID: %d\n", dbrh->packetID());
+	 pq_.dump();
+	 */
 
 #if 0
 	// search sending queue for p
@@ -971,15 +909,14 @@ void DBR_Agent::handlePktForward(Packet *p)
 #endif
 
 	// common settings for forwarding
-	cmh->num_forwards()++;
-	cmh->direction() = hdr_cmn::DOWN;
+	cmh->num_forwards()++;cmh
+	->direction() = hdr_cmn::DOWN;
 	cmh->addr_type_ = AF_INET;
 	cmh->ptype_ = PT_DBR;
 	cmh->size() = dbrh->size() + IP_HDR_LEN;
 	cmh->next_hop() = IP_BROADCAST;
 
-	switch (dbrh->mode())
-	{
+	switch (dbrh->mode()) {
 	case DBRH_DATA_GREEDY:
 		mn_->getLoc(&x, &y, &z);
 
@@ -987,17 +924,16 @@ void DBR_Agent::handlePktForward(Packet *p)
 		delta = z - dbrh->depth();
 
 		// only forward the packet from lower level
-		if (delta < DBR_DEPTH_THRESHOLD)
-		{
+		if (delta < DBR_DEPTH_THRESHOLD) {
 			pq_.purge(p);
 			drop(p, DROP_RTR_TTL);
 			return;
 		}
 
-		#ifdef DEBUG_NONE
+#ifdef DEBUG_NONE
 		fprintf(stderr, "[%d]: z = %.3f, depth = %.3f, delta = %.3f\n",
-			mn_->address(), z, dbrh->depth(), delta);
-		#endif
+				mn_->address(), z, dbrh->depth(), delta);
+#endif
 
 		// update current depth
 		dbrh->depth() = z;
@@ -1011,11 +947,10 @@ void DBR_Agent::handlePktForward(Packet *p)
 
 		break;
 	case DBRH_DATA_RECOVER:
-		if (dbrh->nhops() <= 0)
-		{
-			#ifdef	DEBUG_PRINT
+		if (dbrh->nhops() <= 0) {
+#ifdef	DEBUG_PRINT
 			fprintf(stderr, "[%d] drops pkt! (nhops < 0)\n", mn_->address());
-			#endif
+#endif
 
 			drop(p, DROP_RTR_TTL);
 			return;
@@ -1031,10 +966,10 @@ void DBR_Agent::handlePktForward(Packet *p)
 	dbrh->owner() = dbrh->prev_hop();
 	dbrh->prev_hop() = mn_->address();
 
-	#ifdef DEBUG_NONE
+#ifdef DEBUG_NONE
 	fprintf(stderr, "[%d]: delay %f before broacasting!\n",
 			mn_->address(), delay);
-	#endif
+#endif
 
 	if (pc_ == NULL) {
 		fprintf(stderr, "packet cache pointer is null!\n");
@@ -1043,8 +978,7 @@ void DBR_Agent::handlePktForward(Packet *p)
 
 	// Is this pkt recieved before?
 	// each node only broadcasts the same pkt once
-	if (pc_->accessPacket(dbrh->packetID()))
-	{
+	if (pc_->accessPacket(dbrh->packetID())) {
 		drop(p, DROP_RTR_TTL);
 		return;
 	}
@@ -1052,31 +986,26 @@ void DBR_Agent::handlePktForward(Packet *p)
 	//	pc_->addPacket(dbrh->packetID());
 
 	// put the packet into sending queue
-	double expected_send_time = NOW + delay;
+	double expected_send_time = NOW+ delay;
 	QueueItem *q = new QueueItem(p, expected_send_time);
 
 	/*
-	pq_.insert(q);
-	QueueItem *qf;
-	qf = pq_.front();
-	send_timer_->resched(qf->send_time_ - NOW);
-	*/
+	 pq_.insert(q);
+	 QueueItem *qf;
+	 qf = pq_.front();
+	 send_timer_->resched(qf->send_time_ - NOW);
+	 */
 
-	if (pq_.empty())
-	{
+	if (pq_.empty()) {
 		pq_.insert(q);
 		latest_ = expected_send_time;
 		send_timer_->resched(delay);
-	}
-	else
-	{
-		if (pq_.update(p, expected_send_time))
-		{
+	} else {
+		if (pq_.update(p, expected_send_time)) {
 			pq_.insert(q);
 
 			// update the sending timer
-			if (expected_send_time < latest_)
-			{
+			if (expected_send_time < latest_) {
 				latest_ = expected_send_time;
 				send_timer_->resched(delay);
 			}
@@ -1094,10 +1023,10 @@ void DBR_Agent::recv(Packet *p, Handler *)
 	nsaddr_t src = Address::instance().get_nodeaddr(iph->saddr());
 	nsaddr_t dst = Address::instance().get_nodeaddr(iph->daddr());
 
-	#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 	//fprintf(stderr, "%d receives pkt from %d to %d\n",
 	//	mn_->address(), src, dst);
-	#endif
+#endif
 
 	if (mn_ == NULL)
 	{
@@ -1106,20 +1035,20 @@ void DBR_Agent::recv(Packet *p, Handler *)
 	}
 
 	if (dbrh->mode() == DBRH_BEACON)
-	{// beacon packet
+	{	// beacon packet
 
 		// self is not one of the neighbors
 		if (src != mn_->address())
-			beaconIn(p);
+		beaconIn(p);
 		return;
 	}
 	else if ((src == mn_->address()) &&
-		(cmh->num_forwards() == 0))
-	{// packet I'm originating
+			(cmh->num_forwards() == 0))
+	{	// packet I'm originating
 
-		#ifdef DEBUG_PRINT
+#ifdef DEBUG_PRINT
 		fprintf(stderr, "%d generates data packet.\n", src);
-		#endif
+#endif
 
 		cmh->size() += IP_HDR_LEN + 8;
 		cmh->direction() = hdr_cmn::DOWN;
@@ -1128,43 +1057,43 @@ void DBR_Agent::recv(Packet *p, Handler *)
 		dbrh->packetID() = (int)mn_->address();
 	}
 	else if ((src == mn_->address()) &&
-		(dbrh->mode() == DBRH_DATA_GREEDY))
-	{// duplicate packet, discard
+			(dbrh->mode() == DBRH_DATA_GREEDY))
+	{	// duplicate packet, discard
 
-		#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 		fprintf(stderr, "got the pkt I've sent\n");
-		#endif
+#endif
 
 		drop(p, DROP_RTR_ROUTE_LOOP);
 		return;
 	}
 	else if (dst == mn_->address())
-	{// packet is for me
+	{	// packet is for me
 
-		#ifdef DEBUG_BROADCASTING
+#ifdef DEBUG_BROADCASTING
 		fprintf(stderr, "Packet is delivered!\n");
 		fflush(stderr);
-		#endif
+#endif
 
 		// we may need to send it to upper layer agent
 		send_to_dmux(p, 0);
 
 		return;
 	}
-/*------------------------------------------------
-	else if (dst == IP_BROADCAST)
-	{
-		if (dbrh->mode() == DBRH_BEACON)
-		{
-			// self is not one of the neighbors
-			if (src != mn_->address())
-				beaconIn(p);
-			return;
-		}
-	}
-------------------------------------------------*/
+	/*------------------------------------------------
+	 else if (dst == IP_BROADCAST)
+	 {
+	 if (dbrh->mode() == DBRH_BEACON)
+	 {
+	 // self is not one of the neighbors
+	 if (src != mn_->address())
+	 beaconIn(p);
+	 return;
+	 }
+	 }
+	 ------------------------------------------------*/
 	else
-	{// packet I'm forwarding
+	{	// packet I'm forwarding
 
 		if (--iph->ttl_ == 0)
 		{
@@ -1173,7 +1102,7 @@ void DBR_Agent::recv(Packet *p, Handler *)
 		}
 
 		if((dbrh->mode() == DBRH_DATA_RECOVER) &&
-			(dbrh->owner() == mn_->address()))
+				(dbrh->owner() == mn_->address()))
 		{
 			//fprintf(stderr, "got the pkt I've sent\n");
 			drop(p, DROP_RTR_ROUTE_LOOP);
@@ -1183,18 +1112,17 @@ void DBR_Agent::recv(Packet *p, Handler *)
 		}
 	}
 
-	#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 	fprintf(stderr, "owner %d, prev-hop: %d, cur: %d\n",
-		dbrh->owner(), dbrh->prev_hop(), mn_->address());
-	#endif
+			dbrh->owner(), dbrh->prev_hop(), mn_->address());
+#endif
 
 	// it's time to forward the pkt now
 	forwardPacket(p);
 }
 #endif
 
-void DBR_Agent::recv2(Packet *p, Handler *)
-{
+void DBR_Agent::recv2(Packet *p, Handler *) {
 	hdr_ip *iph = hdr_ip::access(p);
 	hdr_cmn *cmh = hdr_cmn::access(p);
 	hdr_dbr *dbrh = hdr_dbr::access(p);
@@ -1202,87 +1130,74 @@ void DBR_Agent::recv2(Packet *p, Handler *)
 	nsaddr_t src = Address::instance().get_nodeaddr(iph->saddr());
 	nsaddr_t dst = Address::instance().get_nodeaddr(iph->daddr());
 
-	#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 	//fprintf(stderr, "%d receives pkt from %d to %d\n",
 	//	mn_->address(), src, dst);
-	#endif
+#endif
 
-	if (mn_ == NULL)
-	{
+	if (mn_ == NULL) {
 		fprintf(stderr, "ERROR: Pointer to node is null!\n");
 		abort();
 	}
 
-	if (dbrh->mode() == DBRH_BEACON)
-	{// beacon packet
+	if (dbrh->mode() == DBRH_BEACON) {	// beacon packet
 
 		// self is not one of the neighbors
 		if (src != mn_->address())
 			beaconIn(p);
 		return;
-	}
-	else if ((src == mn_->address()) &&
-		(cmh->num_forwards() == 0))
-	{// packet I'm originating
+	} else if ((src == mn_->address()) && (cmh->num_forwards() == 0)) {	// packet I'm originating
 
-		#ifdef DEBUG_PRINT
+#ifdef DEBUG_PRINT
 		fprintf(stderr, "%d generates data packet.\n", src);
-		#endif
+#endif
 
 		cmh->size() += IP_HDR_LEN + 8;
 		cmh->direction() = hdr_cmn::DOWN;
 		iph->ttl_ = 128;
 		dbrh->mode() = DBRH_DATA_GREEDY;
-		dbrh->packetID() = (int)mn_->address();
-	}
-	else if ((src == mn_->address()) &&
-		(dbrh->mode() == DBRH_DATA_GREEDY))
-	{// duplicate packet, discard
+		dbrh->packetID() = (int) mn_->address();
+	} else if ((src == mn_->address()) && (dbrh->mode() == DBRH_DATA_GREEDY)) {	// duplicate packet, discard
 
-		#ifdef	DEBUG_PRINT
+#ifdef	DEBUG_PRINT
 		fprintf(stderr, "got the pkt I've sent\n");
-		#endif
+#endif
 
 		drop(p, DROP_RTR_ROUTE_LOOP);
 		return;
-	}
-	else if (dst == mn_->address())
-	{// packet is for me
+	} else if (dst == mn_->address()) {	// packet is for me
 
-		#ifdef DEBUG_BROADCASTING
-		fprintf(stderr, "Packet is delivered!\n");
-		fflush(stderr);
-		#endif
+#ifdef DEBUG_BROADCASTING
+			fprintf(stderr, "Packet is delivered!\n");
+			fflush(stderr);
+#endif
 
 		// we may need to send it to upper layer agent
 		send_to_dmux(p, 0);
 
 		return;
 	}
-/*------------------------------------------------
-	else if (dst == IP_BROADCAST)
-	{
-		if (dbrh->mode() == DBRH_BEACON)
-		{
-			// self is not one of the neighbors
-			if (src != mn_->address())
-				beaconIn(p);
-			return;
-		}
-	}
-------------------------------------------------*/
-	else
-	{// packet I'm forwarding
+	/*------------------------------------------------
+	 else if (dst == IP_BROADCAST)
+	 {
+	 if (dbrh->mode() == DBRH_BEACON)
+	 {
+	 // self is not one of the neighbors
+	 if (src != mn_->address())
+	 beaconIn(p);
+	 return;
+	 }
+	 }
+	 ------------------------------------------------*/
+	else {	// packet I'm forwarding
 
-		if (--iph->ttl_ == 0)
-		{
+		if (--iph->ttl_ == 0) {
 			drop(p, DROP_RTR_TTL);
 			return;
 		}
 
-		if((dbrh->mode() == DBRH_DATA_RECOVER) &&
-			(dbrh->owner() == mn_->address()))
-		{
+		if ((dbrh->mode() == DBRH_DATA_RECOVER)
+				&& (dbrh->owner() == mn_->address())) {
 			//fprintf(stderr, "got the pkt I've sent\n");
 			drop(p, DROP_RTR_ROUTE_LOOP);
 			// it seems this neighbor couldn't find a greedy node
@@ -1291,78 +1206,66 @@ void DBR_Agent::recv2(Packet *p, Handler *)
 		}
 	}
 
-	#ifdef	DEBUG_PRINT
-	fprintf(stderr, "owner %d, prev-hop: %d, cur: %d\n",
-		dbrh->owner(), dbrh->prev_hop(), mn_->address());
-	#endif
+#ifdef	DEBUG_PRINT
+	fprintf(stderr, "owner %d, prev-hop: %d, cur: %d\n", dbrh->owner(),
+			dbrh->prev_hop(), mn_->address());
+#endif
 
 	// it's time to forward the pkt now
 	forwardPacket(p);
 }
 
-int DBR_Agent::command(int argc, const char * const *argv)
-{
-	if (argc == 2)
-	{
-		if (strcmp(argv[1], "start-dbr") == 0)
-		{
+int DBR_Agent::command(int argc, const char * const *argv) {
+	if (argc == 2) {
+		if (strcmp(argv[1], "start-dbr") == 0) {
 			init();
 			return TCL_OK;
 		}
 
-		if (strcmp(argv[1], "test") == 0)
-		{
+		if (strcmp(argv[1], "test") == 0) {
 			sendBeacon();	// only send beacon once
 			return TCL_OK;
 		}
-	}
-	else if (argc == 3)
-	{
+	} else if (argc == 3) {
 		TclObject *obj;
 
 		if (strcmp(argv[1], "port-dmux") == 0) {
-			dmux = (PortClassifier *)TclObject::lookup(argv[2]);
+			dmux = (PortClassifier *) TclObject::lookup(argv[2]);
 			if (dmux == 0) {
-				fprintf(stderr, "%s: %s lookup of %s failed\n", __FILE__, argv[1],
-					argv[2]);
-				return TCL_ERROR;
-			}
-			return TCL_OK;
-		}
-
-		if (strcasecmp(argv[1], "tracetarget") == 0)
-		{
-			if ((obj = TclObject::lookup(argv[2])) == 0)
-			{
-				fprintf(stderr, "%s: %s lookup of %s failed\n",
-					__FILE__, argv[1], argv[2]);
-				return TCL_ERROR;
-			}
-			traceagent = (Trace *)obj;
-			return TCL_OK;
-		}
-
-		if (strcmp(argv[1], "node") == 0)
-		{
-			if ((obj = TclObject::lookup(argv[2])) == 0)
-			{
-				fprintf(stderr, "%s: %s lookup of %s failed\n",
-					__FILE__, argv[1], argv[2]);
-				return TCL_ERROR;
-			}
-			mn_ = (MobileNode *)obj;
-			return TCL_OK;
-		}
-
-		if (strcasecmp(argv[1], "add-ll") == 0)
-		{
-			if ((obj = TclObject::lookup(argv[2])) == 0)
-			{
-				fprintf(stderr, "DBRAgent: %s lookup of %s failed\n",
+				fprintf(stderr, "%s: %s lookup of %s failed\n", __FILE__,
 						argv[1], argv[2]);
 				return TCL_ERROR;
 			}
-			ll = (NsObject*)obj;
+			return TCL_OK;
+		}
+
+		if (strcasecmp(argv[1], "tracetarget") == 0) {
+			if ((obj = TclObject::lookup(argv[2])) == 0) {
+				fprintf(stderr, "%s: %s lookup of %s failed\n",
+				__FILE__, argv[1], argv[2]);
+				return TCL_ERROR;
+			}
+			traceagent = (Trace *) obj;
+			return TCL_OK;
+		}
+
+		if (strcmp(argv[1], "node") == 0) {
+			if ((obj = TclObject::lookup(argv[2])) == 0) {
+				fprintf(stderr, "%s: %s lookup of %s failed\n",
+				__FILE__, argv[1], argv[2]);
+				return TCL_ERROR;
+			}
+			mn_ = (MobileNode *) obj;
+			return TCL_OK;
+		}
+
+		if (strcasecmp(argv[1], "add-ll") == 0) {
+			if ((obj = TclObject::lookup(argv[2])) == 0) {
+				fprintf(stderr, "DBRAgent: %s lookup of %s failed\n", argv[1],
+						argv[2]);
+				return TCL_ERROR;
+			}
+			ll = (NsObject*) obj;
 			return TCL_OK;
 		}
 
@@ -1370,11 +1273,11 @@ int DBR_Agent::command(int argc, const char * const *argv)
 	return (Agent::command(argc, argv));
 }
 
-void DBR_Agent::trace(char* fmt, ...)
-{
+void DBR_Agent::trace(char* fmt, ...) {
 	va_list ap;
 
-	if (!traceagent) return;
+	if (!traceagent)
+		return;
 
 	va_start(ap, fmt);
 	vsprintf(traceagent->pt_->buffer(), fmt, ap);
@@ -1382,8 +1285,7 @@ void DBR_Agent::trace(char* fmt, ...)
 	va_end(ap);
 }
 
-void DBR_Agent::init(void)
-{
+void DBR_Agent::init(void) {
 	// setup the timer
 	beacon_timer_ = new DBR_BeaconTimer(this);
 	beacon_timer_->sched(Random::uniform(bint_));
@@ -1392,15 +1294,14 @@ void DBR_Agent::init(void)
 	//send_timer_->sched(Random::uniform(bint_));
 }
 
-void DBR_Agent::tap(const Packet *p)
-{
+void DBR_Agent::tap(const Packet *p) {
 	// add function later
 }
 
 //////////////////////////////////////////////////////////////////
 void dumpDBRHdr(Packet *p)
 // dump the header info for debug
-{
+		{
 	hdr_dbr *dbrh = hdr_dbr::access(p);
 
 }
