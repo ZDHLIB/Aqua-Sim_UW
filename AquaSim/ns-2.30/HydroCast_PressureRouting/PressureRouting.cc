@@ -797,7 +797,8 @@ void DBR_Agent::recv(Packet *p, Handler *) {
 		iph->ttl_ = 128;
 
 		// setup DBR header
-		dbrh->mode() = DBRH_DATA_GREEDY;
+//		dbrh->mode() = DBRH_DATA_GREEDY;
+		dbrh->mode() = CONE_SHAPE;
 		//dbrh->packetID() = (int)mn_->address();
 		dbrh->packetID() = pkt_cnt_++;
 		dbrh->depth() = z;		// save the depth info
@@ -809,8 +810,9 @@ void DBR_Agent::recv(Packet *p, Handler *) {
 		return;
 	}
 
-	if ((src == mn_->address()) && (dbrh->mode() == DBRH_DATA_GREEDY)) {// Wow, it seems some one is broadcasting the pkt for us,
+	//if ((src == mn_->address()) && (dbrh->mode() == DBRH_DATA_GREEDY)) {// Wow, it seems some one is broadcasting the pkt for us,
 																		// so we need to dismiss the timer for the pkt
+	if ((src == mn_->address()) && (dbrh->mode() == CONE_SHAPE)) {
 
 #ifdef	DEBUG_PRINT
 		fprintf(stderr, "[%d] got the pkt I've sent\n", mn_->address());
@@ -909,14 +911,17 @@ void DBR_Agent::handlePktForward(Packet *p) {
 #endif
 
 	// common settings for forwarding
-	cmh->num_forwards()++;cmh
-	->direction() = hdr_cmn::DOWN;
+	cmh->num_forwards()++;
+	cmh->direction() = hdr_cmn::DOWN;
 	cmh->addr_type_ = AF_INET;
 	cmh->ptype_ = PT_DBR;
 	cmh->size() = dbrh->size() + IP_HDR_LEN;
 	cmh->next_hop() = IP_BROADCAST;
 
 	switch (dbrh->mode()) {
+	case CONE_SHAPE:
+		//TODO
+		return;
 	case DBRH_DATA_GREEDY:
 		mn_->getLoc(&x, &y, &z);
 
@@ -982,8 +987,9 @@ void DBR_Agent::handlePktForward(Packet *p) {
 		drop(p, DROP_RTR_TTL);
 		return;
 	}
-	//else
-	//	pc_->addPacket(dbrh->packetID());
+	else {
+		pc_->addPacket(dbrh->packetID());
+	}
 
 	// put the packet into sending queue
 	double expected_send_time = NOW+ delay;

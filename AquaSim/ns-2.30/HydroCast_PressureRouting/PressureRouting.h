@@ -139,6 +139,7 @@ private:
 #define	DBRH_DATA_GREEDY	0
 #define	DBRH_DATA_RECOVER	1
 #define	DBRH_BEACON		2
+#define CONE_SHAPE          3
 
 class hdr_dbr {
 public:
@@ -149,7 +150,7 @@ public:
 	}
 
 	double x, y, z;
-
+	double epaValue;
 	int& packetID() { return packetID_; }
 
 	int& valid() { return valid_; }
