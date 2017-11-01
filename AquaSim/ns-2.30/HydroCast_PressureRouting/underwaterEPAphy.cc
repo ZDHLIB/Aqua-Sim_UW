@@ -261,6 +261,7 @@ int UnderwaterPhy::sendUp(Packet *p) {
 	double Pr;
 	double d;
 	int pkt_recvd = 0;
+	double pkt_error_pro = 0;
 	hdr_cmn* hdr = HDR_CMN(p);
 	hdr_dbr* dbr = hdr_dbr::access(p);
 
@@ -288,7 +289,12 @@ int UnderwaterPhy::sendUp(Packet *p) {
 	} else {
 //			hdr->error() = DefaultBitError(hdr->size());
 		d = calDistance(&p->txinfo_, &s);
-		hdr->error() = epaErrorProb(d, freq_);
+		pkt_error_pro = epaErrorProb(d, freq_);
+		if (Random::uniform() < pkt_error_pro )
+			hdr->error() = 1;
+		else
+			hdr->error() = 0;
+
 	}
 
 	p->txinfo_.RxPr = Pr;
@@ -309,7 +315,7 @@ int UnderwaterPhy::sendUp(Packet *p) {
 		}
 	}
 
-	double epaValue = epaSuccessProb(hdr->size(), d, freq_);
+	double epaValue = epaSuccessProb(pkt_error_pro, hdr->size(), d, freq_);
 	if (epaValue == 0) {
 		printf("underwaterphy: epa transmit failed\n");
 		return pkt_recvd;
@@ -359,19 +365,16 @@ int UnderwaterPhy::DefaultBitError(int pktsize) {
 		return 1;
 }
 
-int UnderwaterPhy::epaErrorProb(double d, double f) {
+double UnderwaterPhy::epaErrorProb(double d, double f) {
 	PacketStamp s;
 	s.stamp((MobileNode*) node(), ant_, 0, lambda_);
 	double srn = calSRN(d, f);
 	double pkt_error_pro = (1 - (sqrt(srn / (1 + srn)))) / 2;
-	if (Random::uniform() < (1 - pkt_error_pro))
-		return 0;
-	else
-		return 1;
+	return pkt_error_pro;
 }
 
-int UnderwaterPhy::epaSuccessProb(int pktsize, double d, double f) {
-	double successCorrect = pow((1 - epaErrorProb(d, f)), pktsize);
+double UnderwaterPhy::epaSuccessProb(double pkt_error_pro, int pktsize, double d, double f) {
+	double successCorrect = pow((1 - pkt_error_pro), pktsize);
 	if (Random::uniform() < successCorrect)
 		return successCorrect;
 	else

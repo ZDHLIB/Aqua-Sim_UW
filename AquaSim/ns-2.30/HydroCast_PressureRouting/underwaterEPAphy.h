@@ -53,13 +53,13 @@ public:
 	void status_shift(double);
 
 	/**
-	 * Added by Dunhao zhong
+	 * Added by Dunhao Zhong
 	 */
 	inline double calSRN(double d, double f);
 	inline double  Thorp(double);
-	inline int epaErrorProb(double d, double f);
+	inline double epaErrorProb(double d, double f);
 	inline double calDistance(PacketStamp* t, PacketStamp* r);
-	inline int epaSuccessProb(int pktsize, double d, double f);
+	inline double epaSuccessProb(double pkt_error_pro, int pktsize, double d, double f)
 
 	/* -NEW- */
 	inline double getAntennaZ() { return ant_->getZ(); }
