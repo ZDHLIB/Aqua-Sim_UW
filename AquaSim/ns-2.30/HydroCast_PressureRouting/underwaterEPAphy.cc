@@ -261,7 +261,8 @@ int UnderwaterPhy::sendUp(Packet *p) {
 	double Pr;
 	double d;
 	int pkt_recvd = 0;
-	hdr_cmn *hdr = HDR_CMN(p);
+	hdr_cmn* hdr = HDR_CMN(p);
+	hdr_dbr* dbr = hdr_dbr::access(p);
 
 	// if the node is in sleeping mode, drop the packet simply
 
@@ -313,7 +314,7 @@ int UnderwaterPhy::sendUp(Packet *p) {
 		printf("underwaterphy: epa transmit failed\n");
 		return pkt_recvd;
 	} else {
-		hdr->epaValue() = epaValue;
+		dbr->epaValue = epaValue;
 	}
 
 //		if (Pr < RXThresh_) {
