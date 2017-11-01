@@ -49,11 +49,11 @@ BINDEST = /usr/local/bin
 CC = g++
 MKDEP	= ../../../conf/mkdep
 
-INCLUDE = -I. -I/home/ZDH/Downloads/AquaSim/tclcl-1.18 -I/home/ZDH/Downloads/AquaSim/otcl-1.12 -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include -I/usr/include/pcap
+INCLUDE = -I. -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/usr/include/pcap
 CFLAGS = -O2 -Wall -DCPP_NAMESPACE=std
 LDFLAGS = 
-LIBS = -L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4  -lnsl -ldl -lm 
-INSTALL = /bin/install -c
+LIBS = -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4  -lnsl -ldl -lm 
+INSTALL = /usr/bin/install -c
 
 SRC = tr-stat.cc
 OBJ = $(SRC:.cc=.o)

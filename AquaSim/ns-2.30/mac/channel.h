@@ -46,7 +46,6 @@
 #include "phy.h"
 #include "node.h"
 
-
 class Trace;
 class Node;
 /*=================================================================
@@ -67,35 +66,34 @@ public:
 	double maxdelay() { return delay_; };
   	int index() {return index_;}
         
-//private:
+private:
 	virtual void sendUp(Packet* p, Phy *txif); 
-	virtual int send(Packet* p, double txtime);
-    void dump(void);
-	virtual void contention(Packet*, Handler*); 
-	int jam(double txtime);
-	virtual int collision() { return numtx_ > 1; }
-	virtual double txstop() { return txstop_; }
-	Packet* pkt() { return pkt_; }
+	void dump(void);
+	//virtual void contention(Packet*, Handler*); 
+	//int jam(double txtime);
+	//virtual int collision() { return numtx_ > 1; }
+	//virtual double txstop() { return txstop_; }
+	//Packet* pkt() { return pkt_; }
 
 protected:
 	virtual double get_pdelay(Node* tnode, Node* rnode);
 	int index_;        // multichannel support
 	double delay_;     // channel delay, for collision interval
-	double txstop_;    // end of the last transmission
-	double cwstop_;		// end of the contention window
-	int numtx_;		// number of transmissions during contention
-	Packet* pkt_;		// packet current transmitted on the channel
+	//double txstop_;    // end of the last transmission
+	//double cwstop_;		// end of the contention window
+	//int numtx_;		// number of transmissions during contention
+	//Packet* pkt_;		// packet current transmitted on the channel
 	Trace* trace_;		// to trace the packet transmitting packets
 };
 
 
-class DuplexChannel : public Channel {
+/*class DuplexChannel : public Channel {
   public:
   DuplexChannel() : Channel() {}
   int send(Packet* p, double txtime);
   void contention(Packet*, Handler*); // content for the channel
   inline double txstop() { return 0; }
-};
+  };*/
 
 
 /*====================================================================

@@ -47,24 +47,24 @@ CCOPT = -O2
 MKDEP = ./conf/mkdep
 # Have to be the same as that defined in conf/makefile.win
 TCL2C = ../tclcl-1.18/tcl2c++
-TCLSH = /home/ZDH/Downloads/AquaSim/bin/tclsh8.4
+TCLSH = /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4
 
 #
 # Remember to add a dependency if you add any tcl sources here.
 #
 LIB =  \
-	-L/home/ZDH/Downloads/AquaSim/tclcl-1.18 -ltclcl -L/home/ZDH/Downloads/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Downloads/AquaSim/lib -ltk8.4 -L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4 \
+	-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -ltclcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4 -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4 \
 	-lXext -lX11 \
 	 -lnsl -ldl -lm 
 INCLUDE = \
-	-I. -I/home/ZDH/Downloads/AquaSim/tclcl-1.18 -I/home/ZDH/Downloads/AquaSim/otcl-1.12 -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include \
+	-I. -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/usr/include \
 	 
 
 STATIC = 
-DEFINE = -DTCL_TK  -DNDEBUG -DUSE_SHM -DHAVE_LIBTCLCL -DHAVE_TCLCL_H -DHAVE_LIBOTCL1_12 -DHAVE_OTCL_H -DHAVE_LIBTK8_4 -DHAVE_TK_H -DHAVE_LIBTCL8_4 -DHAVE_TCL_H 
+DEFINE = -DTCL_TK  -DNDEBUG -DUSE_SHM -DHAVE_LIBTCLCL -DHAVE_TCLCL_H -DHAVE_LIBOTCL1_12 -DHAVE_OTCL_H -DHAVE_LIBTK8_4 -DHAVE_TK_H -DHAVE_LIBTCL8_4 -DHAVE_TCL_H -DHAVE_ZLIB_H 
 CFLAGS = $(CCOPT) $(DEFINE) $(INCLUDE)
 
-INSTALL = /bin/install -c
+INSTALL = /usr/bin/install -c
 RANLIB = ranlib
 
 BLANK	= # make a blank space.  DO NOT add anything to this line

@@ -14,7 +14,7 @@
 #
 ac_cv_c_bigendian=${ac_cv_c_bigendian=no}
 ac_cv_c_char_unsigned=${ac_cv_c_char_unsigned=no}
-ac_cv_c_tclconfig=${ac_cv_c_tclconfig=/home/ZDH/Downloads/AquaSim/tcl8.4.13/unix}
+ac_cv_c_tclconfig=${ac_cv_c_tclconfig=/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix}
 ac_cv_func_connect=${ac_cv_func_connect=yes}
 ac_cv_func_gethostbyname=${ac_cv_func_gethostbyname=yes}
 ac_cv_func_sin=${ac_cv_func_sin=no}
@@ -28,7 +28,7 @@ ac_cv_header_unistd_h=${ac_cv_header_unistd_h=yes}
 ac_cv_lib_Xbsd_main=${ac_cv_lib_Xbsd_main=no}
 ac_cv_lib_dl_dlopen=${ac_cv_lib_dl_dlopen=yes}
 ac_cv_lib_ieee_main=${ac_cv_lib_ieee_main=yes}
-ac_cv_path_tclsh=${ac_cv_path_tclsh=/home/ZDH/Downloads/AquaSim/bin/tclsh8.4}
+ac_cv_path_tclsh=${ac_cv_path_tclsh=/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4}
 ac_cv_prog_AR=${ac_cv_prog_AR=ar}
 ac_cv_prog_CC=${ac_cv_prog_CC=gcc}
 ac_cv_prog_CPP=${ac_cv_prog_CPP='gcc -E'}

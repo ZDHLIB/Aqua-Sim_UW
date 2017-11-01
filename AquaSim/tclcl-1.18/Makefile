@@ -41,12 +41,12 @@ CC	= gcc
 CPP	= g++
 LINK	= $(CPP)
 MKDEP	= ./conf/mkdep
-TCLSH	= /home/ZDH/Downloads/AquaSim/bin/tclsh8.4
+TCLSH	= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4
 TCL2C	= ./tcl2c++
 AR	= ar rc $(BLANK)
 
 RANLIB	= ranlib
-INSTALL	= /bin/install -c
+INSTALL	= /usr/bin/install -c
 LN	= ln
 TEST	= test
 RM	= rm -f
@@ -61,10 +61,10 @@ LDOUT	= -o $(BLANK)
 DEFINE	= -DNO_TK  -DNDEBUG -DUSE_SHM -DHAVE_LIBOTCL1_12 -DHAVE_OTCL_H -DHAVE_LIBTK8_4 -DHAVE_TK_H -DHAVE_LIBTCL8_4 -DHAVE_TCLINT_H -DHAVE_TCL_H  -DHAVE_CONFIG_H
 
 INCLUDES = \
-	-I. -I/home/ZDH/Downloads/AquaSim/otcl-1.12 -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include
+	-I. -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include
 
 LIB	= \
-	-L/home/ZDH/Downloads/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Downloads/AquaSim/lib -ltk8.4 -L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4
+	-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4 -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4
 
 CFLAGS	= $(CCOPT) $(DEFINE)
 

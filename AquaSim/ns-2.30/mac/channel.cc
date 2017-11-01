@@ -64,7 +64,6 @@ static const char rcsid[] =
 #include "gridkeeper.h"
 #include "tworayground.h"
 
-/*
 static class ChannelClass : public TclClass {
 public:
 	ChannelClass() : TclClass("Channel") {}
@@ -72,15 +71,14 @@ public:
 		return (new Channel);
 	}
 } class_channel;
-*/
 
-static class DuplexChannelClass : public TclClass {
+/*static class DuplexChannelClass : public TclClass {
 public:
 	DuplexChannelClass() : TclClass("Channel/Duplex") {}
 	TclObject* create(int, const char*const*) {
 		return (new DuplexChannel);
 	}
-} class_channel_duplex; 
+	} class_channel_duplex; */
 
 static class WirelessChannelClass : public TclClass {
 public:
@@ -664,97 +662,97 @@ WirelessChannel::get_pdelay(Node* tnode, Node* rnode)
 //  The packet occupies the channel for the transmission time, txtime
 //  If collision occur (>1 pkts overlap), corrupt all pkts involved
 //	by setting the error bit or discard them
-/*
-int Channel::send(Packet* p, Phy *tifp)
-{
-	// without collision, return 0
- 	Scheduler& s = Scheduler::instance();
- 	double now = s.clock();
 
- 	// busy = time when the channel are still busy with earlier tx
- 	double busy = max(txstop_, cwstop_);
+// int Channel::send(Packet* p, Phy *tifp)
+// {
+// 	// without collision, return 0
+// 	Scheduler& s = Scheduler::instance();
+// 	double now = s.clock();
 
- 	// txstop = when the channel is no longer busy from this tx
- 	txstop_ = max(busy, now + txtime);
+// 	// busy = time when the channel are still busy with earlier tx
+// 	double busy = max(txstop_, cwstop_);
 
- 	// now < busy => collision
- 	//	mark the pkt error bit, EF_COLLISION
- 	//	drop if there is a drop target, drop_
- 	if (now < busy) {
- 		// if still transmit earlier packet, pkt_, then corrupt it
- 		if (pkt_ && pkt_->time_ > now) {
- 			hdr_cmn::access(pkt_)->error() |= EF_COLLISION;
- 			if (drop_) {
- 				s.cancel(pkt_);
- 				drop(pkt_);
- 				pkt_ = 0;
- 			}
-	}
+// 	// txstop = when the channel is no longer busy from this tx
+// 	txstop_ = max(busy, now + txtime);
 
- 		// corrupts the current packet p, and drop if drop_ exists
- 		hdr_cmn::access(p)->error() |= EF_COLLISION;
- 		if (drop_) {
- 			drop(p);
- 			return 1;
- 		}
- 	}
+// 	// now < busy => collision
+// 	//	mark the pkt error bit, EF_COLLISION
+// 	//	drop if there is a drop target, drop_
+// 	if (now < busy) {
+// 		// if still transmit earlier packet, pkt_, then corrupt it
+// 		if (pkt_ && pkt_->time_ > now) {
+// 			hdr_cmn::access(pkt_)->error() |= EF_COLLISION;
+// 			if (drop_) {
+// 				s.cancel(pkt_);
+// 				drop(pkt_);
+// 				pkt_ = 0;
+// 			}
+// 		}
 
- 	// if p was not dropped, call recv() or hand it to trace_ if present
- 	pkt_ = p;
- 	trace_ ? trace_->recv(p, 0) : recv(p, 0);
- 	return 0;
-}
-*/
+// 		// corrupts the current packet p, and drop if drop_ exists
+// 		hdr_cmn::access(p)->error() |= EF_COLLISION;
+// 		if (drop_) {
+// 			drop(p);
+// 			return 1;
+// 		}
+// 	}
+
+// 	// if p was not dropped, call recv() or hand it to trace_ if present
+// 	pkt_ = p;
+// 	trace_ ? trace_->recv(p, 0) : recv(p, 0);
+// 	return 0;
+// }
+
 
 // contention():
 //  The MAC calls this Channel::contention() to enter contention period
 //  It determines when the contention window is over, cwstop_,
 //	and schedule a callback to the MAC for the actual send()
 
-void Channel::contention(Packet* p, Handler* h)
-{
- 	Scheduler& s = Scheduler::instance();
- 	double now = s.clock();
- 	if (now > cwstop_) {
- 		cwstop_ = now + delay_;
- 		numtx_ = 0;
- 	}
- 	numtx_++;
- 	s.schedule(h, p, cwstop_ - now);
-}
+// void Channel::contention(Packet* p, Handler* h)
+// {
+// 	Scheduler& s = Scheduler::instance();
+// 	double now = s.clock();
+// 	if (now > cwstop_) {
+// 		cwstop_ = now + delay_;
+// 		numtx_ = 0;
+// 	}
+// 	numtx_++;
+// 	s.schedule(h, p, cwstop_ - now);
+// }
 
 
 // jam():
 //  Jam the channel for a period txtime
 //  Some MAC protocols use this to let other MAC detect collisions
 
-int Channel::jam(double txtime)
-{
- 	// without collision, return 0
- 	double now = Scheduler::instance().clock();
- 	if (txstop_ > now) {
- 		txstop_ = max(txstop_, now + txtime);
- 		return 1;
- 	}
- 	txstop_ = now + txtime;
- 	return (now < cwstop_);
-}
+// int Channel::jam(double txtime)
+// {
+// 	// without collision, return 0
+// 	double now = Scheduler::instance().clock();
+// 	if (txstop_ > now) {
+// 		txstop_ = max(txstop_, now + txtime);
+// 		return 1;
+// 	}
+// 	txstop_ = now + txtime;
+// 	return (now < cwstop_);
+// }
 
 
-int DuplexChannel::send(Packet* p, double txtime)
-{
- 	double now = Scheduler::instance().clock();
- 	txstop_ = now + txtime;
- 	trace_ ? trace_->recv(p, 0) : recv(p, 0);
- 	return 0;
-}
+// int DuplexChannel::send(Packet* p, double txtime)
+// {
+// 	double now = Scheduler::instance().clock();
+// 	txstop_ = now + txtime;
+// 	trace_ ? trace_->recv(p, 0) : recv(p, 0);
+// 	return 0;
+// }
 
 
-void DuplexChannel::contention(Packet* p, Handler* h)
-{
- 	Scheduler::instance().schedule(h, p, delay_);
- 	numtx_ = 1;
-}
+// void DuplexChannel::contention(Packet* p, Handler* h)
+// {
+// 	Scheduler::instance().schedule(h, p, delay_);
+// 	numtx_ = 1;
+// }
 
 
 

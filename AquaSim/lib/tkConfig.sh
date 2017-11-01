@@ -36,11 +36,11 @@ TK_LIBS='-lX11 -ldl  -lieee -lm'
 
 # Top-level directory in which Tcl's platform-independent files are
 # installed.
-TK_PREFIX='/home/ZDH/Downloads/AquaSim'
+TK_PREFIX='/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim'
 
 # Top-level directory in which Tcl's platform-specific files (e.g.
 # executables) are installed.
-TK_EXEC_PREFIX='/home/ZDH/Downloads/AquaSim'
+TK_EXEC_PREFIX='/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim'
 
 # -I switch(es) to use to make all of the X11 include files accessible:
 TK_XINCLUDES=''
@@ -53,11 +53,11 @@ TK_LIB_FLAG='-ltk8.4'
 
 # String to pass to linker to pick up the Tk library from its
 # build directory.
-TK_BUILD_LIB_SPEC='-L/home/ZDH/Downloads/AquaSim/tk8.4.13/unix -ltk8.4'
+TK_BUILD_LIB_SPEC='-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tk8.4.13/unix -ltk8.4'
 
 # String to pass to linker to pick up the Tk library from its
 # installed directory.
-TK_LIB_SPEC='-L/home/ZDH/Downloads/AquaSim/lib -ltk8.4'
+TK_LIB_SPEC='-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4'
 
 # Location of the top-level source directory from which Tk was built.
 # This is the directory that contains a README file as well as
@@ -65,7 +65,7 @@ TK_LIB_SPEC='-L/home/ZDH/Downloads/AquaSim/lib -ltk8.4'
 # different place than the directory containing the source files, this
 # points to the location of the sources, not the location where Tk was
 # compiled.
-TK_SRC_DIR='/home/ZDH/Downloads/AquaSim/tk8.4.13'
+TK_SRC_DIR='/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tk8.4.13'
 
 # Needed if you want to make a 'fat' shared library library
 # containing tk objects or link a different wish.
@@ -80,14 +80,14 @@ TK_STUB_LIB_FLAG='-ltkstub8.4'
 
 # String to pass to linker to pick up the Tk stub library from its
 # build directory.
-TK_BUILD_STUB_LIB_SPEC='-L/home/ZDH/Downloads/AquaSim/tk8.4.13/unix -ltkstub8.4'
+TK_BUILD_STUB_LIB_SPEC='-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tk8.4.13/unix -ltkstub8.4'
 
 # String to pass to linker to pick up the Tk stub library from its
 # installed directory.
-TK_STUB_LIB_SPEC='-L/home/ZDH/Downloads/AquaSim/lib -ltkstub8.4'
+TK_STUB_LIB_SPEC='-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltkstub8.4'
 
 # Path to the Tk stub library in the build directory.
-TK_BUILD_STUB_LIB_PATH='/home/ZDH/Downloads/AquaSim/tk8.4.13/unix/libtkstub8.4.a'
+TK_BUILD_STUB_LIB_PATH='/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tk8.4.13/unix/libtkstub8.4.a'
 
 # Path to the Tk stub library in the install directory.
-TK_STUB_LIB_PATH='/home/ZDH/Downloads/AquaSim/lib/libtkstub8.4.a'
+TK_STUB_LIB_PATH='/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib/libtkstub8.4.a'

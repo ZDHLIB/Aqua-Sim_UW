@@ -306,7 +306,7 @@ Copyright (C) 2003 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 srcdir=.
-INSTALL="/bin/install -c"
+INSTALL="/usr/bin/install -c"
 # If no file are specified by the user, then we need to provide default
 # value.  By we need to know if files were specified by the user.
 ac_need_defaults=:
@@ -502,22 +502,22 @@ s,@CPP@,gcc -E,;t t
 s,@EGREP@,grep -E,;t t
 s,@CPP_NAMESPACE@,std,;t t
 s,@V_TCL_LIBRARY_FILES@,$(TCL_84_LIBRARY_FILES),;t t
-s,@V_TCLSH@,/home/ZDH/Downloads/AquaSim/bin/tclsh8.4,;t t
+s,@V_TCLSH@,/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4,;t t
 s,@V_LIBRARY_TCL@,../lib/tcl8.4,;t t
 s,@V_TKDOSNAMES@,$(LIBRARY_TK)/optMenu.tcl $(LIBRARY_TK)/scrlbar.tcl,;t t
 s,@V_LIBRARY_TK@,../lib/tk8.4,;t t
 s,@V_TCL2CPP@,../tclcl-1.18/tcl2c++,;t t
-s,@PERL@,/bin/perl,;t t
+s,@PERL@,/usr/bin/perl,;t t
 s,@build_nse@,,;t t
-s,@V_INCLUDES@,-I/home/ZDH/Downloads/AquaSim/tclcl-1.18 -I/home/ZDH/Downloads/AquaSim/otcl-1.12 -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include -I/usr/include/pcap,;t t
-s,@V_LIBS@,-L/home/ZDH/Downloads/AquaSim/tclcl-1.18 -ltclcl -L/home/ZDH/Downloads/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Downloads/AquaSim/lib -ltk8.4 -L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4,;t t
+s,@V_INCLUDES@,-I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/usr/include/pcap,;t t
+s,@V_LIBS@,-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -ltclcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4 -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4,;t t
 s,@V_DEFINES@,-DHAVE_LIBTCLCL -DHAVE_TCLCL_H -DHAVE_LIBOTCL1_12 -DHAVE_OTCL_H -DHAVE_LIBTK8_4 -DHAVE_TK_H -DHAVE_LIBTCL8_4 -DHAVE_TCL_H ,;t t
 s,@V_STATIC@,,;t t
 s,@V_TAR_TARGET@,linux-gnu,;t t
-s,@V_LIB_TCLCL@,-L/home/ZDH/Downloads/AquaSim/tclcl-1.18 -ltclcl,;t t
-s,@V_LIB_OTCL@,-L/home/ZDH/Downloads/AquaSim/otcl-1.12 -lotcl,;t t
-s,@V_LIB_TCL@,-L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4,;t t
-s,@V_LIB_TK@,-L/home/ZDH/Downloads/AquaSim/lib -ltk8.4,;t t
+s,@V_LIB_TCLCL@,-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -ltclcl,;t t
+s,@V_LIB_OTCL@,-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -lotcl,;t t
+s,@V_LIB_TCL@,-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4,;t t
+s,@V_LIB_TK@,-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4,;t t
 s,@V_ALL@,,;t t
 s,@V_CCOPT@,-O2 -Wall,;t t
 s,@V_TAR_EXTRA@,,;t t

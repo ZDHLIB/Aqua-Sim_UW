@@ -93,17 +93,17 @@ set $exe_var $alternate\n\
 }\n\
 }\n\
 \n\
-checkout_executable PERL \"/bin/perl\" perl \"\\\n\
+checkout_executable PERL \"/usr/bin/perl\" perl \"\\\n\
 When configured, ns found the right version of perl in\\\n\
-/bin/perl\n\
+/usr/bin/perl\n\
 but it doesn't seem to be there anymore, so\\\n\
 ns will fall back on running the first perl in your path.\\\n\
 The wrong version of perl may break the test suites.\\\n\
 Reconfigure and rebuild ns if this is a problem.\\\n\
 \"\n\
-checkout_executable TCLSH \"/home/ZDH/Downloads/AquaSim/bin/tclsh8.4\" tclsh \"\\\n\
+checkout_executable TCLSH \"/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4\" tclsh \"\\\n\
 When configured, ns found the right version of tclsh in\\\n\
-/home/ZDH/Downloads/AquaSim/bin/tclsh8.4\n\
+/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4\n\
 but it doesn't seem to be there anymore, so\\\n\
 ns will fall back on running the first tclsh in your path.\\\n\
 The wrong version of tclsh may break the test suites.\\\n\

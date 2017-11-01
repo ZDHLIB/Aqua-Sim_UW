@@ -37,17 +37,17 @@ CC	= gcc
 CPP	= g++
 LINK	= $(CPP)
 MKDEP	= ./conf/mkdep
-TCLSH	= /home/ZDH/Downloads/AquaSim/bin/tclsh8.4
+TCLSH	= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4
 TCL2C	= ../tclcl-1.18/tcl2c++
 AR	= ar rc $(BLANK)
 
 RANLIB	= ranlib
-INSTALL	= /bin/install -c
+INSTALL	= /usr/bin/install -c
 LN	= ln
 TEST	= test
 RM	= rm -f
 MV      = mv
-PERL	= /bin/perl
+PERL	= /usr/bin/perl
 
 # for diffusion
 #DIFF_INCLUDES = "./diffusion3/main ./diffusion3/lib ./diffusion3/nr ./diffusion3/ns"
@@ -62,7 +62,7 @@ DEFINE	= -DTCP_DELAY_BIND_ALL -DNO_TK -DTCLCL_CLASSINSTVAR  -DNDEBUG -DLINUX_TCP
 
 INCLUDES = \
 	-I. \
-	-I/home/ZDH/Downloads/AquaSim/tclcl-1.18 -I/home/ZDH/Downloads/AquaSim/otcl-1.12 -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include -I/usr/include/pcap \
+	-I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/usr/include/pcap \
 	-I./tcp -I./sctp -I./common -I./link -I./queue \
 	-I./adc -I./apps -I./mac -I./mobile -I./trace \
 	-I./routing -I./tools -I./classifier -I./mcast \
@@ -74,7 +74,7 @@ INCLUDES = \
 
 
 LIB	= \
-	-L/home/ZDH/Downloads/AquaSim/tclcl-1.18 -ltclcl -L/home/ZDH/Downloads/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Downloads/AquaSim/lib -ltk8.4 -L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4 \
+	-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tclcl-1.18 -ltclcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/otcl-1.12 -lotcl -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4 -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4 \
 	 -lnsl -ldl \
 	-lm -lm 
 #	-L${exec_prefix}/lib \
@@ -155,7 +155,6 @@ NS_TCL_LIB_STL = tcl/lib/ns-diffusion.tcl \
 
 OBJ_CC = \
 	tools/random.o tools/rng.o tools/ranvar.o common/misc.o common/timer-handler.o \
-	protoname/protoname.o protoname/protoname_rtable.o \
 	common/scheduler.o common/object.o common/packet.o \
 	common/ip.o routing/route.o common/connector.o common/ttl.o \
 	trace/trace.o trace/trace-ip.o \
@@ -258,7 +257,6 @@ OBJ_CC = \
 	common/Decapsulator.o common/Encapsulator.o \
 	common/encap.o \
 	mac/channel.o mac/mac.o mac/ll.o mac/mac-802_11.o \
-	mac/mac-csma.o \
 	mac/mac-802_3.o mac/mac-tdma.o mac/smac.o \
 	mobile/mip.o mobile/mip-reg.o mobile/gridkeeper.o \
 	mobile/propagation.o mobile/tworayground.o \

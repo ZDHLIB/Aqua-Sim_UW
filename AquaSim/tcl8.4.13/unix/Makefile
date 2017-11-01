@@ -27,10 +27,10 @@ PATCH_LEVEL		= .13
 # to the "configure" script.  The *dir vars are standard configure
 # substitutions that are based off prefix and exec_prefix.
 
-prefix			= /home/ZDH/Downloads/AquaSim
-exec_prefix		= /home/ZDH/Downloads/AquaSim
+prefix			= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim
+exec_prefix		= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim
 bindir			= ${exec_prefix}/bin
-libdir			= /home/ZDH/Downloads/AquaSim/lib
+libdir			= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib
 includedir		= ${prefix}/include
 mandir			= ${prefix}/man
 
@@ -86,7 +86,7 @@ HTML_DIR		= $(DISTDIR)/html
 HTML_INSTALL_DIR	= $(INSTALL_ROOT)$(HTML_DIR)
 
 # Package search path.
-TCL_PACKAGE_PATH	= /home/ZDH/Downloads/AquaSim/lib
+TCL_PACKAGE_PATH	= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib
 
 # Libraries built with optimization switches have this additional extension
 TCL_DBGX		= 
@@ -185,7 +185,7 @@ SHELL			= /bin/sh
 INSTALL_STRIP_PROGRAM   = -s
 INSTALL_STRIP_LIBRARY   = -S -S
 
-INSTALL			= /home/ZDH/Downloads/AquaSim/tcl8.4.13/unix/install-sh -c
+INSTALL			= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix/install-sh -c
 INSTALL_PROGRAM		= ${INSTALL}
 INSTALL_LIBRARY		= ${INSTALL}
 INSTALL_DATA		= ${INSTALL} -m 644
@@ -254,7 +254,7 @@ COMPAT_OBJS		=
 AC_FLAGS		=  -DHAVE_LIMITS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_PARAM_H=1 -DSTATIC_BUILD=1 -DPEEK_XCLOSEIM=1 -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DHAVE_GETCWD=1 -DHAVE_OPENDIR=1 -DHAVE_STRSTR=1 -DHAVE_STRTOL=1 -DHAVE_STRTOLL=1 -DHAVE_STRTOULL=1 -DHAVE_TMPNAM=1 -DHAVE_WAITPID=1 -DUSE_TERMIOS=1 -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DHAVE_ST_BLKSIZE=1 -DSTDC_HEADERS=1 -DHAVE_SIGNED_CHAR=1 -DHAVE_LANGINFO=1 -DHAVE_FTS=1 -DHAVE_SYS_IOCTL_H=1 
 AR			= ar
 RANLIB			= ranlib
-SRC_DIR			= /home/ZDH/Downloads/AquaSim/tcl8.4.13/unix
+SRC_DIR			= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix
 TOP_DIR			= $(SRC_DIR)/..
 GENERIC_DIR		= $(TOP_DIR)/generic
 COMPAT_DIR		= $(TOP_DIR)/compat
@@ -262,9 +262,9 @@ TOOL_DIR		= $(TOP_DIR)/tools
 UNIX_DIR		= $(SRC_DIR)
 MAC_OSX_DIR		= $(TOP_DIR)/macosx
 # Must be absolute because of the cd dltest $(DLTEST_DIR)/configure below.
-DLTEST_DIR		= /home/ZDH/Downloads/AquaSim/tcl8.4.13/unix/dltest
+DLTEST_DIR		= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix/dltest
 # Must be absolute to so the corresponding tcltest's tcl_library is absolute.
-TCL_BUILDTIME_LIBRARY	= /home/ZDH/Downloads/AquaSim/tcl8.4.13/library
+TCL_BUILDTIME_LIBRARY	= /home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/library
 
 CC			= gcc -pipe
 #CC			= purify -best-effort gcc -pipe -DPURIFY
@@ -491,7 +491,7 @@ objs: ${OBJS}
 
 
 tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
-	${CC} ${CFLAGS} ${LDFLAGS} ${TCLSH_OBJS} -L/home/ZDH/Downloads/AquaSim/tcl8.4.13/unix -ltcl8.4${TCL_DBGX} ${LIBS} \
+	${CC} ${CFLAGS} ${LDFLAGS} ${TCLSH_OBJS} -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix -ltcl8.4${TCL_DBGX} ${LIBS} \
 		${CC_SEARCH_FLAGS} -o tclsh
 
 # Resetting the LIB_RUNTIME_DIR below is required so that
@@ -503,7 +503,7 @@ tcltest: ${TCLTEST_OBJS} ${TCL_LIB_FILE} ${BUILD_DLTEST}
 	$(MAKE) tcltest-real LIB_RUNTIME_DIR=`pwd`
 
 tcltest-real:
-	${CC} ${CFLAGS} ${LDFLAGS} ${TCLTEST_OBJS} -L/home/ZDH/Downloads/AquaSim/tcl8.4.13/unix -ltcl8.4${TCL_DBGX} ${LIBS} \
+	${CC} ${CFLAGS} ${LDFLAGS} ${TCLTEST_OBJS} -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix -ltcl8.4${TCL_DBGX} ${LIBS} \
 		${CC_SEARCH_FLAGS} -o tcltest
 
 # Note, in the target below TCL_LIBRARY needs to be set or else
@@ -1091,7 +1091,7 @@ tclMacOSXNotify.o: $(MAC_OSX_DIR)/tclMacOSXNotify.c
 xttest:  ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
 	tclLoadDl.o ${BUILD_DLTEST}
 	${CC} ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
-		tclLoadDl.o -L/home/ZDH/Downloads/AquaSim/tcl8.4.13/unix -ltcl8.4${TCL_DBGX} ${LIBS} \
+		tclLoadDl.o -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/tcl8.4.13/unix -ltcl8.4${TCL_DBGX} ${LIBS} \
 		${CC_SEARCH_FLAGS} -L/usr/openwin/lib -lXt -o xttest
 
 tclXtNotify.o: $(UNIX_DIR)/tclXtNotify.c

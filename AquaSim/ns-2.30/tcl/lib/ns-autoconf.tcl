@@ -32,17 +32,17 @@ proc checkout_executable {exe_var best alternate text} {
 #
 # Keep track of where the good perl is.
 #
-checkout_executable PERL "/bin/perl" perl "\
+checkout_executable PERL "/usr/bin/perl" perl "\
 	When configured, ns found the right version of perl in\
-	/bin/perl
+	/usr/bin/perl
 	but it doesn't seem to be there anymore, so\
 	ns will fall back on running the first perl in your path.\
 	The wrong version of perl may break the test suites.\
 	Reconfigure and rebuild ns if this is a problem.\
 "
-checkout_executable TCLSH "/home/ZDH/Downloads/AquaSim/bin/tclsh8.4" tclsh "\
+checkout_executable TCLSH "/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4" tclsh "\
 	When configured, ns found the right version of tclsh in\
-	/home/ZDH/Downloads/AquaSim/bin/tclsh8.4
+	/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/bin/tclsh8.4
 	but it doesn't seem to be there anymore, so\
 	ns will fall back on running the first tclsh in your path.\
 	The wrong version of tclsh may break the test suites.\

@@ -57,7 +57,7 @@ DEFINE = -Dstand_alone -DSTL_NAMESPACE=@STL_NAMESPACE@ -DCPP_NAMESPACE=std
 CFLAGS = -O2 -Wall 
 LDFLAGS = 
 LIBS =  -lnsl -ldl -lm -lm 
-INSTALL = /bin/install -c
+INSTALL = /usr/bin/install -c
 
 all: setdest calcdest
 

@@ -7,7 +7,7 @@
 CC=		gcc
 CFLAGS=		-g -O2
 RANLIB= 	ranlib
-INSTALL=	/bin/install -c
+INSTALL=	/usr/bin/install -c
 
 #
 # how to compile, link, and name shared libraries
@@ -38,7 +38,7 @@ INST_OINC=	/usr/local/include
 
 INCLUDES = \
 	-I. \
-	-I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include -I/home/ZDH/Downloads/AquaSim/include \
+	-I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include -I/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/include \
 	 \
 	-I${prefix}/include \
 	
@@ -46,7 +46,7 @@ INCLUDES = \
 DEFINES = \
 	 -DNDEBUG -DUSE_SHM
 
-LIB =	-L/home/ZDH/Downloads/AquaSim/lib -ltk8.4 -L/home/ZDH/Downloads/AquaSim/lib -ltcl8.4 \
+LIB =	-L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltk8.4 -L/home/ZDH/Documents/Repository/Aqua-Sim_UW/AquaSim/lib -ltcl8.4 \
 	-lXext -lX11  -lnsl -ldl -lm
 
 OTCLLIB= -L. -lotcl
