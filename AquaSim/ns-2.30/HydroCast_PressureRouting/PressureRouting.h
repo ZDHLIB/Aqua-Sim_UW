@@ -105,12 +105,13 @@ private:
 
 class NeighbEnt {
 public:
-	NeighbEnt(DBR_Agent* ina) : x(0.0), y(0.0), z(0.0), routeFlag(0) {}
+	NeighbEnt(DBR_Agent* ina) : x(0.0), y(0.0), z(0.0), routeFlag(0), epaValue(0) {}
 	// the agent is used for timer object
 
 	double x, y, z;		// location of neighbor, actually we only need depth info
 	nsaddr_t net_id;    // IP of neighbor
 	int routeFlag;		// indicates that a routing path exists
+	double epaValue;
 
 	// user timer
 	//DBR_DeadNeighbTimer dnt;	// timer for expiration of neighbor
@@ -151,6 +152,7 @@ public:
 
 	double x, y, z;
 	double epaValue;
+	nsaddr_t node_maxEpa_;
 	int& packetID() { return packetID_; }
 
 	int& valid() { return valid_; }
@@ -158,6 +160,7 @@ public:
 	int& nhops() { return nhops_; }
 	nsaddr_t& prev_hop() { return prev_hop_; }
 	nsaddr_t& owner() { return owner_; }
+	nsaddr_t& node_maxEpa() { return node_maxEpa_; }
 
 	double& depth() { return depth_; }
 

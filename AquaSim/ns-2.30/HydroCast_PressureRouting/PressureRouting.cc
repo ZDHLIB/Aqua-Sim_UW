@@ -738,6 +738,7 @@ void DBR_Agent::beaconIn(Packet *p) {
 	ne->y = dbrh->y;
 	ne->z = dbrh->z;
 	ne->net_id = src;
+	ne->epaValue = dbrh->epaValue;
 
 	ntab_->ent_add(ne);
 
@@ -921,6 +922,7 @@ void DBR_Agent::handlePktForward(Packet *p) {
 	switch (dbrh->mode()) {
 	case CONE_SHAPE:
 		//TODO
+
 		return;
 	case DBRH_DATA_GREEDY:
 		mn_->getLoc(&x, &y, &z);
@@ -930,6 +932,13 @@ void DBR_Agent::handlePktForward(Packet *p) {
 
 		// only forward the packet from lower level
 		if (delta < DBR_DEPTH_THRESHOLD) {
+			pq_.purge(p);
+			drop(p, DROP_RTR_TTL);
+			return;
+		}
+
+		// I am not the neighbor with max epa
+		if( dbrh->node_maxEpa() != mn_->address_() ){
 			pq_.purge(p);
 			drop(p, DROP_RTR_TTL);
 			return;
@@ -1045,7 +1054,7 @@ void DBR_Agent::recv(Packet *p, Handler *)
 
 		// self is not one of the neighbors
 		if (src != mn_->address())
-		beaconIn(p);
+			beaconIn(p);
 		return;
 	}
 	else if ((src == mn_->address()) &&
