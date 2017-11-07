@@ -1,4 +1,4 @@
-#include "PressureRouting.h"
+#include <HydroCast_PressureRouting/PressureRoutingAgent.h>
 
 extern "C" {
 #include <stdlib.h>
@@ -1306,7 +1306,7 @@ void DBR_Agent::init(void) {
 	beacon_timer_->sched(Random::uniform(bint_));
 
 	send_timer_ = new DBR_SendingTimer(this);
-	//send_timer_->sched(Random::uniform(bint_));
+	send_timer_->sched(Random::uniform(bint_));
 }
 
 void DBR_Agent::tap(const Packet *p) {
