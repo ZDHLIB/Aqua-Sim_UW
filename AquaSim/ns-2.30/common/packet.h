@@ -204,6 +204,9 @@ enum packet_t {
 	/* protoname */
 	PT_PROTONAME,
 
+	/* EPA packet type */
+	PT_MAX_EPA,
+
 	PT_NTYPE // This MUST be the LAST one
 };
 
@@ -331,6 +334,8 @@ public:
 
 		/* protoname */
 		name_[PT_PROTONAME] = "protoname";
+
+		name_[PT_MAX_EPA] = "EPARouting";
 
 		name_[PT_NTYPE] = "undefined";
 	}
