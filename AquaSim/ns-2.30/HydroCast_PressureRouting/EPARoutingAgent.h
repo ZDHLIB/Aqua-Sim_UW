@@ -12,6 +12,7 @@
 #include <map>
 #include <vector>
 #include <stdarg.h>
+#include <math.h>
 
 #include <object.h>
 #include <agent.h>
@@ -30,7 +31,9 @@
 
 #define	EPA_PORT		0xFF
 #define	EPA_BEACON		1
+#define EPA_MSG         2
 #define EXPIRE_TIME     120
+#define EPA_RANGE       240
 
 #define	BEACON_RESCHED  beacon_timer_->resched(30);
 
@@ -94,7 +97,7 @@ private:
 //=============================NeighbTable End====================================
 
 
-//=============================Packet header Start====================================
+//=============================Packet header Start================================
 class packet_hdr {
 public:
 	static int offset_;		// offset of this header
@@ -121,7 +124,7 @@ public:
 };
 //=============================Packet header End====================================
 
-//=============================EPARoutingAgent Start====================================
+//=============================EPARoutingAgent Start================================
 class EPARoutingAgent : public Agent {
 public:
 	EPARoutingAgent();
@@ -133,12 +136,16 @@ public:
 protected:
 	NeighbTable neighbTable_1hop;
 	std::map<nsaddr_t, NeighbTable> neighbTable_2hop;  //store my neighbor's neighbors
+	std::map<nsaddr_t, double> epaNeighb;
 	NsObject *ll;				// our link layer output
 	MobileNode* mn_;			// MobileNode associated with the agent
 	BeaconTimer *beacon_timer_;		// beacon timer
 
 	void init(void);
 	void sendBeacon(void);
+	void calNeighEPA();
+	std::map<nsaddr_t, NeighbTable> filterNodes();   //filter nodes with distance >= R/2
+	double distance(NeighbEnt e1, NeighbEnt e2);
 	Packet* makeBeacon();    //make beacon header
 	std::vector<NeighbEnt> getNeighbors_1hop();  //neighbors with 1 hop
 };

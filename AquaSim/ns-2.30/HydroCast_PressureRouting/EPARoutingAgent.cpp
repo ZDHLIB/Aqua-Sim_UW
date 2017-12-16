@@ -112,6 +112,25 @@ std::vector<NeighbEnt> EPARoutingAgent::getNeighbors_1hop(){
 }
 
 
+std::map<nsaddr_t, NeighbTable> EPARoutingAgent::filterNodes(){
+	map<nsaddr_t, NeighbTable>::iterator iter;
+	for(iter = neighbTable_2hop.begin(); iter != neighbTable_2hop.end(); ++iter){
+		nsaddr_t neighb = iter->first;
+		NeighbTable neighTable = iter->second;
+		map<nsaddr_t, NeighbEnt*>::iterator iter2;
+		for(iter2 = neighTable.neighbTable.begin(); iter2 != neighTable.neighbTable.end(); ++iter2) {
+			nsaddr_t addr = iter2->first;
+			NeighbEnt* neighEnt = iter2->second;
+			double dis = distance(neighb, neighEnt);
+			if( dis > EPA_RANGE ){
+				neighTable.delete_ent(neighEnt);
+			}
+		}
+	}
+	return neighbTable_2hop;
+}
+
+
 void EPARoutingAgent::recv(Packet *p, Handler *){
 	hdr_ip *iph = hdr_ip::access(p);
 	hdr_cmn *cmh = hdr_cmn::access(p);
@@ -149,13 +168,32 @@ void EPARoutingAgent::recv(Packet *p, Handler *){
 			neighbTable_2hop[sender_id] = neighbTalbe;
 		}
 		break;
+
+	case EPA_MSG:
+		filterNodes();
+
 	}
 }
 
 
+double EPARoutingAgent::distance(NeighbEnt e1, NeighbEnt e2){
+	double dX = e1.x-e2.x;
+	double dY = e1.y-e2.y;
+	double dZ = e1.z-e2.z;
+	return sqrt(dX * dX + dY * dY + dZ * dZ);
+}
 
+void EPARoutingAgent::calNeighEPA(){
+	map<nsaddr_t, NeighbTable>::iterator iter;
+	for(iter = neighbTable_2hop.begin(); iter != neighbTable_2hop.end(); ++iter){
+		nsaddr_t neighb = iter->first;
+		NeighbTable neighTable = iter->second;
+		map<nsaddr_t, NeighbEnt*>::iterator iter2;
+		for(iter2 = neighTable.neighbTable.begin(); iter2 != neighTable.neighbTable.end(); ++iter2) {
 
-
+		}
+	}
+}
 
 
 
